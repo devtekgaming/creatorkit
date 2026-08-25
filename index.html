@@ -2,40 +2,64 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="google-site-verification"
-    content="U0823Er0X4TAH7HUAzIubZOfYNHbjuePGo3FKuz6sg0">
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="google-site-verification"
+    content="U0823Er0X4TAH7HUAzIubZOfYNHbjuePGo3FKuz6sg0"
+  >
 
   <meta
     name="description"
-    content="CreatorKit — Free creator tools for YouTube, Instagram, gaming and social media creators."
+    content="CreatorKit — Free creator tools for YouTube, Instagram, gaming and social media creators. Generate titles, hashtags, usernames, captions, hooks and more."
   >
 
   <meta
     name="keywords"
-    content="creator tools, YouTube tools, Instagram tools, title generator, hashtag generator, username generator, word counter"
+    content="creator tools, YouTube tools, Instagram tools, YouTube title generator, hashtag generator, username generator, word counter, hook generator, caption generator, CTA generator"
   >
 
-  <meta name="robots" content="index, follow">
+  <meta
+    name="robots"
+    content="index, follow"
+  >
 
   <title>CreatorKit — Free Creator Tools</title>
 
   <link rel="stylesheet" href="style.css">
+
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
   <div class="nav">
 
-    <a class="logo" href="/creatorkit/">
+    <a
+      class="logo"
+      href="/creatorkit/"
+    >
       Creator<span>Kit</span>
     </a>
 
-    <a class="nav-btn" href="#tools">
+
+    <a
+      class="nav-btn"
+      href="#tools"
+    >
       Free Tools
     </a>
 
@@ -44,8 +68,13 @@
 </header>
 
 
+
 <main>
 
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
@@ -53,55 +82,136 @@
     ⚡ 100% FREE CREATOR TOOLS
   </p>
 
+
   <h1>
     Create faster.<br>
     <span>Grow smarter.</span>
   </h1>
 
+
   <p class="sub">
-    Simple tools for YouTubers, Instagram creators and gamers.
+    Simple tools for YouTubers, Instagram creators,
+    gamers and social media creators.
     No signup required.
   </p>
 
-  <a class="primary" href="#tools">
+
+  <a
+    class="primary"
+    href="#tools"
+  >
     Explore Tools ↓
   </a>
 
 </section>
 
 
+
+<!-- =========================
+     AD
+========================= -->
+
 <div class="ad-slot">
   ADVERTISEMENT
 </div>
 
 
-<section id="tools" class="tools">
+
+<!-- =========================
+     TOOLS
+========================= -->
+
+<section
+  id="tools"
+  class="tools"
+>
 
   <h2>
     Free Creator Tools
   </h2>
+
 
   <p class="section-sub">
     Pick a tool and get results instantly.
   </p>
 
 
-  <div class="grid">
+
+  <!-- SEARCH -->
+
+  <div
+    style="
+      max-width:650px;
+      margin:0 auto 35px;
+    "
+  >
+
+    <input
+      id="toolSearch"
+      type="search"
+      placeholder="🔎 Search a creator tool..."
+      aria-label="Search creator tools"
+      style="
+        width:100%;
+        background:#090b12;
+        color:white;
+        border:1px solid #303544;
+        border-radius:12px;
+        padding:14px 16px;
+        outline:none;
+        font:inherit;
+      "
+    >
+
+  </div>
+
+
+
+  <!-- POPULAR -->
+
+  <div
+    style="
+      text-align:center;
+      margin-bottom:25px;
+    "
+  >
+
+    <span
+      class="badge"
+      style="margin-bottom:0;"
+    >
+      ⭐ POPULAR TOOLS
+    </span>
+
+  </div>
+
+
+
+  <div class="grid" id="toolGrid">
+
 
 
     <!-- 1 -->
 
-    <article class="card">
+    <article
+      class="card tool-card"
+      data-name="youtube title generator titles youtube"
+    >
 
-      <div class="icon">🎬</div>
+      <div class="icon">
+        🎬
+      </div>
+
 
       <h3>
         YouTube Title Generator
       </h3>
 
+
       <p>
         Generate clickable title ideas for your next video.
       </p>
+
 
       <a
         class="primary"
@@ -113,19 +223,28 @@
     </article>
 
 
+
     <!-- 2 -->
 
-    <article class="card">
+    <article
+      class="card tool-card"
+      data-name="hashtag generator hashtags instagram youtube social media"
+    >
 
-      <div class="icon">#️⃣</div>
+      <div class="icon">
+        #️⃣
+      </div>
+
 
       <h3>
         Hashtag Generator
       </h3>
 
+
       <p>
         Generate relevant hashtags for your content.
       </p>
+
 
       <a
         class="primary"
@@ -137,19 +256,28 @@
     </article>
 
 
+
     <!-- 3 -->
 
-    <article class="card">
+    <article
+      class="card tool-card"
+      data-name="username generator username gaming social media"
+    >
 
-      <div class="icon">👤</div>
+      <div class="icon">
+        👤
+      </div>
+
 
       <h3>
         Username Generator
       </h3>
 
+
       <p>
         Create username ideas for social media and gaming.
       </p>
+
 
       <a
         class="primary"
@@ -161,19 +289,28 @@
     </article>
 
 
+
     <!-- 4 -->
 
-    <article class="card">
+    <article
+      class="card tool-card"
+      data-name="word counter words characters writing"
+    >
 
-      <div class="icon">🔢</div>
+      <div class="icon">
+        🔢
+      </div>
+
 
       <h3>
         Word Counter
       </h3>
 
+
       <p>
         Count words and characters instantly.
       </p>
+
 
       <a
         class="primary"
@@ -185,236 +322,23 @@
     </article>
 
 
+
     <!-- 5 -->
 
-    <article class="card">
+    <article
+      class="card tool-card"
+      data-name="youtube hook generator hook video shorts"
+    >
 
-      <div class="icon">🪝</div>
+      <div class="icon">
+        🪝
+      </div>
+
 
       <h3>
         YouTube Hook Generator
       </h3>
 
-      <p>
-        Generate engaging hooks for videos and Shorts.
-      </p>
-
-      <a
-        class="primary"
-        href="/creatorkit/youtube-hook-generator.html"
-      >
-        Open Tool →
-      </a>
-
-    </article>
-
-
-    <!-- 6 -->
-
-    <article class="card">
-
-      <div class="icon">📱</div>
-
-      <h3>
-        Instagram Bio Generator
-      </h3>
 
       <p>
-        Create creative Instagram bio ideas.
-      </p>
-
-      <a
-        class="primary"
-        href="/creatorkit/instagram-bio-generator.html"
-      >
-        Open Tool →
-      </a>
-
-    </article>
-
-
-    <!-- 7 -->
-
-    <article class="card">
-
-      <div class="icon">💡</div>
-
-      <h3>
-        Content Ideas Generator
-      </h3>
-
-      <p>
-        Never run out of ideas for your next content.
-      </p>
-
-      <a
-        class="primary"
-        href="/creatorkit/content-ideas-generator.html"
-      >
-        Open Tool →
-      </a>
-
-    </article>
-
-
-    <!-- 8 -->
-
-    <article class="card">
-
-      <div class="icon">✍️</div>
-
-      <h3>
-        Caption Generator
-      </h3>
-
-      <p>
-        Generate captions for posts, Reels and Shorts.
-      </p>
-
-      <a
-        class="primary"
-        href="/creatorkit/caption-generator.html"
-      >
-        Open Tool →
-      </a>
-
-    </article>
-
-
-    <!-- 9 -->
-
-    <article class="card">
-
-      <div class="icon">📣</div>
-
-      <h3>
-        CTA Generator
-      </h3>
-
-      <p>
-        Create calls-to-action for your content.
-      </p>
-
-      <a
-        class="primary"
-        href="/creatorkit/cta-generator.html"
-      >
-        Open Tool →
-      </a>
-
-    </article>
-
-
-    <!-- 10 -->
-
-    <article class="card">
-
-      <div class="icon">📝</div>
-
-      <h3>
-        YouTube Description Generator
-      </h3>
-
-      <p>
-        Create ready-to-edit YouTube video descriptions.
-      </p>
-
-      <a
-        class="primary"
-        href="/creatorkit/youtube-description-generator.html"
-      >
-        Open Tool →
-      </a>
-
-    </article>
-
-
-  </div>
-
-</section>
-
-
-<div class="ad-slot">
-  ADVERTISEMENT
-</div>
-
-
-<section class="about">
-
-  <h2>
-    Why CreatorKit?
-  </h2>
-
-  <div class="features">
-
-    <div>
-      <b>⚡ Fast</b>
-      <p>Instant results directly in your browser.</p>
-    </div>
-
-    <div>
-      <b>🔒 Private</b>
-      <p>Your text stays on your device.</p>
-    </div>
-
-    <div>
-      <b>💸 Free</b>
-      <p>No account or subscription required.</p>
-    </div>
-
-  </div>
-
-
-  <p style="text-align:center; margin-top:25px;">
-
-    <a
-      href="/creatorkit/about.html"
-      style="color:inherit;"
-    >
-      Learn more about CreatorKit →
-    </a>
-
-  </p>
-
-</section>
-
-</main>
-
-
-<footer>
-
-  <p>
-    © 2026 CreatorKit · Free tools for creators
-  </p>
-
-  <p>
-
-    <a href="/creatorkit/privacy.html">
-      Privacy Policy
-    </a>
-
-    ·
-
-    <a href="/creatorkit/terms.html">
-      Terms & Conditions
-    </a>
-
-    ·
-
-    <a href="/creatorkit/about.html">
-      About Us
-    </a>
-
-    ·
-
-    <a href="/creatorkit/contact.html">
-      Contact
-    </a>
-
-  </p>
-
-</footer>
-
-</body>
-
-</html>
+        Generate engaging hooks for
