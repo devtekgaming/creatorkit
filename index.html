@@ -341,4 +341,432 @@
 
 
       <p>
-        Generate engaging hooks for
+        Generate engaging hooks for videos and Shorts.
+      </p>
+
+
+      <a
+        class="primary"
+        href="/creatorkit/youtube-hook-generator.html"
+      >
+        Open Tool →
+      </a>
+
+    </article>
+
+
+
+    <!-- 6 -->
+
+    <article
+      class="card tool-card"
+      data-name="instagram bio generator instagram bio social media"
+    >
+
+      <div class="icon">
+        📱
+      </div>
+
+
+      <h3>
+        Instagram Bio Generator
+      </h3>
+
+
+      <p>
+        Create creative Instagram bio ideas.
+      </p>
+
+
+      <a
+        class="primary"
+        href="/creatorkit/instagram-bio-generator.html"
+      >
+        Open Tool →
+      </a>
+
+    </article>
+
+
+
+    <!-- 7 -->
+
+    <article
+      class="card tool-card"
+      data-name="content ideas generator content ideas youtube instagram reels"
+    >
+
+      <div class="icon">
+        💡
+      </div>
+
+
+      <h3>
+        Content Ideas Generator
+      </h3>
+
+
+      <p>
+        Never run out of ideas for your next content.
+      </p>
+
+
+      <a
+        class="primary"
+        href="/creatorkit/content-ideas-generator.html"
+      >
+        Open Tool →
+      </a>
+
+    </article>
+
+
+
+    <!-- 8 -->
+
+    <article
+      class="card tool-card"
+      data-name="caption generator captions instagram reels shorts social media"
+    >
+
+      <div class="icon">
+        ✍️
+      </div>
+
+
+      <h3>
+        Caption Generator
+      </h3>
+
+
+      <p>
+        Generate captions for posts, Reels and Shorts.
+      </p>
+
+
+      <a
+        class="primary"
+        href="/creatorkit/caption-generator.html"
+      >
+        Open Tool →
+      </a>
+
+    </article>
+
+
+
+    <!-- 9 -->
+
+    <article
+      class="card tool-card"
+      data-name="cta generator call to action youtube instagram"
+    >
+
+      <div class="icon">
+        📣
+      </div>
+
+
+      <h3>
+        CTA Generator
+      </h3>
+
+
+      <p>
+        Create calls-to-action for your content.
+      </p>
+
+
+      <a
+        class="primary"
+        href="/creatorkit/cta-generator.html"
+      >
+        Open Tool →
+      </a>
+
+    </article>
+
+
+
+    <!-- 10 -->
+
+    <article
+      class="card tool-card"
+      data-name="youtube description generator description video youtube"
+    >
+
+      <div class="icon">
+        📝
+      </div>
+
+
+      <h3>
+        YouTube Description Generator
+      </h3>
+
+
+      <p>
+        Create ready-to-edit YouTube video descriptions.
+      </p>
+
+
+      <a
+        class="primary"
+        href="/creatorkit/youtube-description-generator.html"
+      >
+        Open Tool →
+      </a>
+
+    </article>
+
+
+
+  </div>
+
+
+  <!-- NO RESULTS -->
+
+  <p
+    id="noTools"
+    style="
+      display:none;
+      text-align:center;
+      color:#8f96aa;
+      margin-top:30px;
+    "
+  >
+    No tools found. Try another search.
+  </p>
+
+
+</section>
+
+
+
+<!-- =========================
+     AD
+========================= -->
+
+<div class="ad-slot">
+  ADVERTISEMENT
+</div>
+
+
+
+<!-- =========================
+     WHY CREATOR KIT
+========================= -->
+
+<section class="about">
+
+  <h2>
+    Why CreatorKit?
+  </h2>
+
+
+  <p
+    class="section-sub"
+    style="margin-top:8px;"
+  >
+    Simple, fast and useful tools made for creators.
+  </p>
+
+
+  <div class="features">
+
+
+    <div>
+
+      <b>
+        ⚡ Fast
+      </b>
+
+      <p>
+        Instant results directly in your browser.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <b>
+        🔒 Private
+      </b>
+
+      <p>
+        Your text stays on your device.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <b>
+        💸 Free
+      </b>
+
+      <p>
+        No account or subscription required.
+      </p>
+
+    </div>
+
+
+  </div>
+
+
+
+  <p
+    style="
+      text-align:center;
+      margin-top:25px;
+    "
+  >
+
+    <a
+      href="/creatorkit/about.html"
+      style="color:inherit;"
+    >
+      Learn more about CreatorKit →
+    </a>
+
+  </p>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <p>
+    © 2026 CreatorKit · Free tools for creators
+  </p>
+
+
+  <p>
+
+    <a
+      href="/creatorkit/privacy.html"
+    >
+      Privacy Policy
+    </a>
+
+    ·
+
+    <a
+      href="/creatorkit/terms.html"
+    >
+      Terms & Conditions
+    </a>
+
+    ·
+
+    <a
+      href="/creatorkit/about.html"
+    >
+      About Us
+    </a>
+
+    ·
+
+    <a
+      href="/creatorkit/contact.html"
+    >
+      Contact
+    </a>
+
+  </p>
+
+</footer>
+
+
+
+<!-- =========================
+     SEARCH JAVASCRIPT
+========================= -->
+
+<script>
+
+const searchInput =
+  document.getElementById("toolSearch");
+
+const toolCards =
+  document.querySelectorAll(".tool-card");
+
+const noTools =
+  document.getElementById("noTools");
+
+
+searchInput.addEventListener(
+  "input",
+  function () {
+
+    const query =
+      this.value
+        .toLowerCase()
+        .trim();
+
+    let visible =
+      0;
+
+
+    toolCards.forEach(
+      function (card) {
+
+        const name =
+          card
+            .getAttribute("data-name")
+            .toLowerCase();
+
+
+        if (
+          name.includes(query)
+        ) {
+
+          card.style.display =
+            "";
+
+          visible++;
+
+        } else {
+
+          card.style.display =
+            "none";
+
+        }
+
+      }
+    );
+
+
+    if (visible === 0) {
+
+      noTools.style.display =
+        "block";
+
+    } else {
+
+      noTools.style.display =
+        "none";
+
+    }
+
+  }
+);
+
+</script>
+
+
+</body>
+
+</html>
