@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Free YouTube Hook Generator by CreatorKit. Generate engaging opening hook ideas for YouTube videos, Shorts and gaming content."
+  >
+
+  <meta
+    name="keywords"
+    content="YouTube hook generator, free hook generator, YouTube intro generator, video hook ideas, Shorts hooks, gaming hooks, CreatorKit"
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <meta
+    property="og:title"
+    content="Free YouTube Hook Generator — CreatorKit"
+  >
+
+  <meta
+    property="og:description"
+    content="Generate engaging YouTube video hook ideas instantly with CreatorKit."
+  >
+
+  <meta
+    property="og:url"
+    content="https://devtekgaming.github.io/creatorkit/youtube-hook-generator.html"
+  >
+
+  <meta property="og:type" content="website">
+
+  <title>YouTube Hook Generator — Free Tool | CreatorKit</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="nav">
+
+      <a
+        class="logo"
+        href="/creatorkit/"
+      >
+        Creator<span>Kit</span>
+      </a>
+
+      <a
+        class="nav-btn"
+        href="/creatorkit/"
+      >
+        All Tools
+      </a>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- MAIN -->
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <p class="badge">
+        🪝 FREE YOUTUBE TOOL
+      </p>
+
+      <h1>
+        YouTube Hook<br>
+        <span>Generator</span>
+      </h1>
+
+      <p class="sub">
+        Generate engaging opening hook ideas for YouTube videos,
+        Shorts, Reels and gaming content.
+      </p>
+
+    </section>
+
+
+
+    <!-- TOOL -->
+
+    <section class="tools">
+
+      <div class="grid">
+
+        <article class="card">
+
+          <div class="icon">
+            🪝
+          </div>
+
+          <h2>
+            Generate Video Hooks
+          </h2>
+
+          <p>
+            Enter your video topic and get multiple opening hook ideas.
+          </p>
+
+          <input
+            id="hookTopic"
+            type="text"
+            placeholder="e.g. gaming setup"
+          >
+
+          <button onclick="generateHooks()">
+            Generate Hooks
+          </button>
+
+          <div
+            id="hookResult"
+            class="result"
+          ></div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- AD -->
+
+    <div class="ad-slot">
+      ADVERTISEMENT
+    </div>
+
+
+
+    <!-- HOW TO USE -->
+
+    <section class="about">
+
+      <h2>
+        How to use the YouTube Hook Generator
+      </h2>
+
+      <div class="features">
+
+        <div>
+
+          <b>
+            1️⃣ Enter your topic
+          </b>
+
+          <p>
+            Type the subject of your video.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <b>
+            2️⃣ Generate hooks
+          </b>
+
+          <p>
+            Click the Generate Hooks button.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <b>
+            3️⃣ Choose your opening
+          </b>
+
+          <p>
+            Pick a hook that fits your video's style.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- SEO CONTENT -->
+
+    <section class="about">
+
+      <h2>
+        What is a YouTube Hook?
+      </h2>
+
+      <p
+        style="max-width:800px; margin:0 auto; line-height:1.8;"
+      >
+        A YouTube hook is the opening part of a video designed to
+        quickly introduce the topic and encourage viewers to keep
+        watching. A strong opening can make your video feel more
+        interesting and focused.
+      </p>
+
+
+      <h2 style="margin-top:40px;">
+        Who can use this tool?
+      </h2>
+
+      <p
+        style="max-width:800px; margin:0 auto; line-height:1.8;"
+      >
+        YouTubers, Shorts creators, gamers, vloggers and other
+        content creators can use CreatorKit's free Hook Generator
+        to brainstorm opening ideas for their videos.
+      </p>
+
+    </section>
+
+
+
+    <!-- FAQ -->
+
+    <section class="about">
+
+      <h2>
+        Frequently Asked Questions
+      </h2>
+
+      <div class="features">
+
+        <div>
+
+          <b>
+            Is the YouTube Hook Generator free?
+          </b>
+
+          <p>
+            Yes. CreatorKit provides this tool for free.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <b>
+            Do I need an account?
+          </b>
+
+          <p>
+            No signup or account is required.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <b>
+            Can I use the hooks for Shorts?
+          </b>
+
+          <p>
+            Yes. You can adapt the generated ideas for
+            Shorts, Reels and other short-form content.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 CreatorKit · Free tools for creators
+    </p>
+
+    <p>
+
+      <a href="/creatorkit/privacy.html">
+        Privacy Policy
+      </a>
+
+      ·
+
+      <a href="/creatorkit/terms.html">
+        Terms & Conditions
+      </a>
+
+      ·
+
+      <a href="/creatorkit/about.html">
+        About Us
+      </a>
+
+      ·
+
+      <a href="/creatorkit/contact.html">
+        Contact
+      </a>
+
+    </p>
+
+  </footer>
+
+
+
+  <!-- HOOK GENERATOR SCRIPT -->
+
+  <script>
+
+    function generateHooks() {
+
+      const topic =
+        document
+          .getElementById("hookTopic")
+          .value
+          .trim();
+
+
+      const result =
+        document.getElementById("hookResult");
+
+
+      if (!topic) {
+
+        result.innerHTML =
+          "Please enter a video topic.";
+
+        return;
+
+      }
+
+
+      const hooks = [
+
+        `🔥 Stop scrolling! Here's what you need to know about ${topic}.`,
+
+        `I tried ${topic} so you don't have to.`,
+
+        `Before you start ${topic}, watch this.`,
+
+        `Nobody tells you this about ${topic}.`,
+
+        `This completely changed the way I look at ${topic}.`,
+
+        `Wait until you see what happened with ${topic}.`,
+
+        `Here's the truth about ${topic}.`,
+
+        `5 things you should know about ${topic}.`,
+
+        `You might be doing ${topic} completely wrong.`,
+
+        `Here's how to get better at ${topic}.`
+
+      ];
+
+
+      result.innerHTML =
+        hooks
+          .map((hook, index) =>
+            `<div style="margin-bottom:10px;">
+              <b>${index + 1}.</b> ${hook}
+            </div>`
+          )
+          .join("");
+
+    }
+
+  </script>
+
+
+</body>
+
+</html>
