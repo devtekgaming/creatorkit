@@ -1,400 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
-    content="Free Instagram Bio Generator by CreatorKit. Generate creative Instagram bio ideas for creators, gamers and influencers."
+    content="Free Instagram Bio Generator by CreatorKit."
   >
 
-  <meta
-    name="keywords"
-    content="Instagram bio generator, free Instagram bio generator, Instagram bio ideas, creator bio, gaming bio, CreatorKit"
-  >
-
-  <meta name="robots" content="index, follow">
-
-  <meta
-    property="og:title"
-    content="Free Instagram Bio Generator — CreatorKit"
-  >
-
-  <meta
-    property="og:description"
-    content="Generate creative Instagram bio ideas instantly with CreatorKit."
-  >
-
-  <meta
-    property="og:url"
-    content="https://devtekgaming.github.io/creatorkit/instagram-bio-generator.html"
-  >
-
-  <meta property="og:type" content="website">
-
-  <title>Instagram Bio Generator — Free Tool | CreatorKit</title>
+  <title>Instagram Bio Generator — CreatorKit</title>
 
   <link rel="stylesheet" href="style.css">
-</head>
 
+</head>
 
 <body>
 
-  <!-- HEADER -->
+<header>
 
-  <header>
+  <div class="nav">
 
-    <div class="nav">
+    <a class="logo" href="/creatorkit/">
+      Creator<span>Kit</span>
+    </a>
 
-      <a
-        class="logo"
-        href="/creatorkit/"
-      >
-        Creator<span>Kit</span>
-      </a>
+    <a class="nav-btn" href="/creatorkit/">
+      Home
+    </a>
 
-      <a
-        class="nav-btn"
-        href="/creatorkit/"
-      >
-        All Tools
-      </a>
+  </div>
 
-    </div>
+</header>
 
-  </header>
 
+<main>
 
+<section class="tool-page">
 
-  <!-- MAIN -->
+  <div class="badge">
+    📱 FREE CREATOR TOOL
+  </div>
 
-  <main>
+  <h1>
+    Instagram Bio Generator
+  </h1>
 
-    <!-- HERO -->
+  <p class="description">
+    Generate creative Instagram bio ideas for creators, gamers and brands.
+  </p>
 
-    <section class="hero">
 
-      <p class="badge">
-        📱 FREE INSTAGRAM TOOL
-      </p>
+  <div class="card">
 
-      <h1>
-        Instagram Bio<br>
-        <span>Generator</span>
-      </h1>
+    <input
+      id="topic"
+      type="text"
+      placeholder="e.g. gaming creator"
+    >
 
-      <p class="sub">
-        Create creative Instagram bio ideas for creators,
-        gamers, influencers and personal brands.
-      </p>
+    <button onclick="generateBio()">
+      Generate Bios
+    </button>
 
-    </section>
+    <div
+      id="result"
+      class="result"
+    ></div>
 
+  </div>
 
+</section>
 
-    <!-- TOOL -->
+</main>
 
-    <section class="tools">
 
-      <div class="grid">
+<footer>
 
-        <article class="card">
+  <p>
+    © 2026 CreatorKit · Free tools for creators
+  </p>
 
-          <div class="icon">
-            📱
-          </div>
+</footer>
 
-          <h2>
-            Generate Instagram Bios
-          </h2>
 
-          <p>
-            Enter your name or niche and get bio ideas instantly.
-          </p>
+<script>
 
-          <input
-            id="bioTopic"
-            type="text"
-            placeholder="e.g. Gaming Creator"
-          >
+function generateBio() {
 
-          <button onclick="generateBios()">
-            Generate Bios
-          </button>
+  const topic =
+    document
+      .getElementById("topic")
+      .value
+      .trim() || "content creator";
 
-          <div
-            id="bioResult"
-            class="result"
-          ></div>
 
-        </article>
+  const bios = [
 
-      </div>
+    `🎮 ${topic} | Creating. Gaming. Growing. 🚀`,
 
-    </section>
+    `⚡ ${topic}\n🎬 New content regularly\n👇 Follow the journey`,
 
+    `🔥 ${topic}\n🎥 Videos • Shorts • Reels\n🚀 Creating every day`,
 
+    `🎮 Creator | Gamer | Dreamer\n✨ ${topic}\n📩 Collabs welcome`,
 
-    <!-- AD -->
+    `🚀 Building my creator journey\n🎬 ${topic}\n❤️ Thanks for being here`
 
-    <div class="ad-slot">
-      ADVERTISEMENT
-    </div>
+  ];
 
 
+  const result =
+    document.getElementById("result");
 
-    <!-- HOW TO USE -->
 
-    <section class="about">
+  result.innerHTML =
+    bios
+      .join("<br><br>")
+      .replace(/\n/g, "<br>") +
+    '<br><button class="copy-btn" onclick="copyResult()">📋 Copy Result</button>';
 
-      <h2>
-        How to use the Instagram Bio Generator
-      </h2>
+}
 
-      <div class="features">
 
-        <div>
+function copyResult() {
 
-          <b>
-            1️⃣ Enter your niche
-          </b>
+  const result =
+    document.getElementById("result");
 
-          <p>
-            Enter your name, niche or creator type.
-          </p>
+  const text =
+    result.innerText
+      .replace("📋 Copy Result", "")
+      .trim();
 
-        </div>
+  navigator.clipboard.writeText(text);
 
+  const button =
+    result.querySelector(".copy-btn");
 
-        <div>
+  button.textContent = "✓ Copied!";
 
-          <b>
-            2️⃣ Generate bios
-          </b>
+  setTimeout(() => {
 
-          <p>
-            Click the Generate Bios button.
-          </p>
+    button.textContent =
+      "📋 Copy Result";
 
-        </div>
+  }, 1800);
 
+}
 
-        <div>
-
-          <b>
-            3️⃣ Pick your favorite
-          </b>
-
-          <p>
-            Choose a bio that matches your profile.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- SEO CONTENT -->
-
-    <section class="about">
-
-      <h2>
-        What is an Instagram Bio Generator?
-      </h2>
-
-      <p
-        style="max-width:800px; margin:0 auto; line-height:1.8;"
-      >
-        CreatorKit's Instagram Bio Generator is a free tool that
-        helps you create short and creative Instagram bio ideas.
-        Enter your niche or creator type and explore different
-        bio styles for your profile.
-      </p>
-
-
-      <h2 style="margin-top:40px;">
-        Who can use this tool?
-      </h2>
-
-      <p
-        style="max-width:800px; margin:0 auto; line-height:1.8;"
-      >
-        Instagram creators, gamers, YouTubers, influencers,
-        vloggers and personal brands can use this tool to
-        brainstorm profile bio ideas.
-      </p>
-
-    </section>
-
-
-
-    <!-- FAQ -->
-
-    <section class="about">
-
-      <h2>
-        Frequently Asked Questions
-      </h2>
-
-      <div class="features">
-
-        <div>
-
-          <b>
-            Is the Instagram Bio Generator free?
-          </b>
-
-          <p>
-            Yes. CreatorKit provides this tool for free.
-          </p>
-
-        </div>
-
-
-        <div>
-
-          <b>
-            Do I need an account?
-          </b>
-
-          <p>
-            No signup or account is required.
-          </p>
-
-        </div>
-
-
-        <div>
-
-          <b>
-            Can I use these bios on Instagram?
-          </b>
-
-          <p>
-            Yes. You can copy and customize any generated
-            idea for your Instagram profile.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <p>
-      © 2026 CreatorKit · Free tools for creators
-    </p>
-
-    <p>
-
-      <a href="/creatorkit/privacy.html">
-        Privacy Policy
-      </a>
-
-      ·
-
-      <a href="/creatorkit/terms.html">
-        Terms & Conditions
-      </a>
-
-      ·
-
-      <a href="/creatorkit/about.html">
-        About Us
-      </a>
-
-      ·
-
-      <a href="/creatorkit/contact.html">
-        Contact
-      </a>
-
-    </p>
-
-  </footer>
-
-
-
-  <!-- BIO GENERATOR SCRIPT -->
-
-  <script>
-
-    function generateBios() {
-
-      const topic =
-        document
-          .getElementById("bioTopic")
-          .value
-          .trim();
-
-
-      const result =
-        document.getElementById("bioResult");
-
-
-      if (!topic) {
-
-        result.innerHTML =
-          "Please enter your name or niche.";
-
-        return;
-
-      }
-
-
-      const bios = [
-
-        `🎮 ${topic} | Creating. Gaming. Growing. 🚀`,
-
-        `✨ ${topic}<br>🎬 Content Creator<br>🚀 Creating every day`,
-
-        `🎮 ${topic}<br>🔥 Gaming & Content<br>📲 Follow the journey`,
-
-        `⚡ ${topic}<br>🎥 Creator<br>🎮 Gamer<br>🚀 Let's grow together`,
-
-        `🎬 ${topic}<br>💡 Creating content<br>🎮 Gaming enthusiast`,
-
-        `🚀 ${topic}<br>🎮 Gaming | 🎬 Content<br>👇 Join the journey`,
-
-        `🎮 Gamer • Creator • Dreamer<br>✨ ${topic}`,
-
-        `🔥 ${topic}<br>🎥 Making content<br>🎮 Playing games<br>🚀 Chasing goals`,
-
-        `📱 ${topic}<br>🎬 Digital Creator<br>⚡ New content regularly`,
-
-        `🎮 ${topic}<br>💻 Tech & Gaming<br>🔥 Creating something new`
-
-      ];
-
-
-      result.innerHTML =
-        bios
-          .map((bio, index) =>
-            `<div style="margin-bottom:18px;">
-              <b>${index + 1}.</b><br>
-              ${bio}
-            </div>`
-          )
-          .join("");
-
-    }
-
-  </script>
-
+</script>
 
 </body>
-
 </html>
