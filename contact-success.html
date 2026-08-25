@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Contact CreatorKit. Send us your questions, feedback or suggestions."
+  >
+
+  <title>Contact Us | CreatorKit</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #0b0b12;
+      color: #ffffff;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 620px;
+
+      background: #151522;
+
+      padding: 35px;
+
+      border-radius: 20px;
+
+      border: 1px solid #292940;
+
+      box-shadow:
+        0 0 35px rgba(124, 77, 255, 0.22);
+    }
+
+    .logo {
+      display: block;
+
+      text-align: center;
+
+      font-size: 26px;
+
+      font-weight: bold;
+
+      text-decoration: none;
+
+      color: #ffffff;
+
+      margin-bottom: 25px;
+    }
+
+    .logo span {
+      color: #7c4dff;
+    }
+
+    h1 {
+      text-align: center;
+
+      font-size: 34px;
+
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+
+      color: #aaa;
+
+      line-height: 1.6;
+
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+
+      font-weight: bold;
+
+      margin-bottom: 8px;
+
+      color: #ffffff;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+
+      padding: 14px;
+
+      border-radius: 10px;
+
+      border: 1px solid #33334a;
+
+      background: #0e0e18;
+
+      color: #ffffff;
+
+      font-size: 15px;
+
+      outline: none;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #7c4dff;
+
+      box-shadow: 0 0 0 2px rgba(124, 77, 255, 0.12);
+    }
+
+    textarea {
+      min-height: 160px;
+
+      resize: vertical;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #777;
+    }
+
+    .submit-btn {
+      width: 100%;
+
+      padding: 15px;
+
+      border: none;
+
+      border-radius: 10px;
+
+      background: #7c4dff;
+
+      color: #ffffff;
+
+      font-size: 16px;
+
+      font-weight: bold;
+
+      cursor: pointer;
+
+      transition: 0.2s;
+    }
+
+    .submit-btn:hover {
+      background: #6938e8;
+
+      transform: translateY(-1px);
+    }
+
+    .back {
+      display: block;
+
+      text-align: center;
+
+      margin-top: 22px;
+
+      color: #aaa;
+
+      text-decoration: none;
+
+      font-size: 14px;
+    }
+
+    .back:hover {
+      color: #ffffff;
+    }
+
+    .note {
+      text-align: center;
+
+      color: #777;
+
+      font-size: 12px;
+
+      margin-top: 18px;
+
+      line-height: 1.5;
+    }
+
+    @media (max-width: 600px) {
+
+      .container {
+        padding: 25px 20px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <div class="container">
+
+    <a
+      class="logo"
+      href="/creatorkit/"
+    >
+      Creator<span>Kit</span>
+    </a>
+
+
+    <h1>
+      Contact Us
+    </h1>
+
+
+    <p class="subtitle">
+      Have a question, suggestion or need help?
+      Send us a message and we'll get back to you.
+    </p>
+
+
+    <form
+      action="https://formsubmit.co/YOUR_EMAIL_HERE"
+      method="POST"
+    >
+
+      <!-- Email subject -->
+      <input
+        type="hidden"
+        name="_subject"
+        value="New CreatorKit Contact Message"
+      >
+
+
+      <!-- Disable FormSubmit captcha -->
+      <input
+        type="hidden"
+        name="_captcha"
+        value="false"
+      >
+
+
+      <!-- Redirect after successful submission -->
+      <input
+        type="hidden"
+        name="_next"
+        value="https://devtekgaming.github.io/creatorkit/contact-success.html"
+      >
+
+
+      <div class="form-group">
+
+        <label for="name">
+          Your Name
+        </label>
+
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          autocomplete="name"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="email">
+          Your Email
+        </label>
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          autocomplete="email"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="message">
+          Message
+        </label>
+
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Write your message here..."
+          required
+        ></textarea>
+
+      </div>
+
+
+      <button
+        type="submit"
+        class="submit-btn"
+      >
+        Send Message
+      </button>
+
+    </form>
+
+
+    <p class="note">
+      Your message will be sent securely to the CreatorKit team.
+    </p>
+
+
+    <a
+      class="back"
+      href="/creatorkit/"
+    >
+      ← Back to CreatorKit
+    </a>
+
+  </div>
+
+</body>
+
+</html>
