@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Free Word Counter by CreatorKit. Count words, characters and spaces in your text instantly."
+  >
+
+  <meta
+    name="keywords"
+    content="word counter, free word counter, character counter, online word counter, text counter, CreatorKit"
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <meta
+    property="og:title"
+    content="Free Word Counter — CreatorKit"
+  >
+
+  <meta
+    property="og:description"
+    content="Count words and characters instantly with CreatorKit's free online Word Counter."
+  >
+
+  <meta
+    property="og:url"
+    content="https://devtekgaming.github.io/creatorkit/word-counter.html"
+  >
+
+  <meta property="og:type" content="website">
+
+  <title>Word Counter — Free Tool | CreatorKit</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="nav">
+
+      <a
+        class="logo"
+        href="/creatorkit/"
+      >
+        Creator<span>Kit</span>
+      </a>
+
+      <a
+        class="nav-btn"
+        href="/creatorkit/"
+      >
+        All Tools
+      </a>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- MAIN -->
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <p class="badge">
+        🔢 FREE WRITING TOOL
+      </p>
+
+      <h1>
+        Word<br>
+        <span>Counter</span>
+      </h1>
+
+      <p class="sub">
+        Count words and characters in your text instantly.
+        Simple, fast and completely free.
+      </p>
+
+    </section>
+
+
+
+    <!-- TOOL -->
+
+    <section class="tools">
+
+      <div class="grid">
+
+        <article class="card">
+
+          <div class="icon">
+            🔢
+          </div>
+
+          <h2>
+            Count Your Text
+          </h2>
+
+          <p>
+            Paste or type your text below.
+          </p>
+
+          <textarea
+            id="wordText"
+            rows="10"
+            placeholder="Paste your text here..."
+            oninput="countText()"
+          ></textarea>
+
+          <button onclick="countText()">
+            Count Words
+          </button>
+
+          <div
+            id="wordResult"
+            class="result"
+          >
+            Words: 0 · Characters: 0 · Characters without spaces: 0
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- AD -->
+
+    <div class="ad-slot">
+      ADVERTISEMENT
+    </div>
+
+
+
+    <!-- HOW TO USE -->
+
+    <section class="about">
+
+      <h2>
+        How to use the Word Counter
+      </h2>
+
+      <div class="features">
+
+        <div>
+          <b>1️⃣ Enter your text</b>
+
+          <p>
+            Type or paste your text into the box.
+          </p>
+        </div>
+
+        <div>
+          <b>2️⃣ Count instantly</b>
+
+          <p>
+            The counter updates as you type.
+          </p>
+        </div>
+
+        <div>
+          <b>3️⃣ Check your results</b>
+
+          <p>
+            See your word and character counts instantly.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- SEO CONTENT -->
+
+    <section class="about">
+
+      <h2>
+        What is a Word Counter?
+      </h2>
+
+      <p
+        style="max-width:800px; margin:0 auto; line-height:1.8;"
+      >
+        CreatorKit's Word Counter is a free online tool that counts
+        the number of words and characters in your text. It can be
+        useful for YouTube descriptions, social media captions,
+        scripts, articles, assignments and other content.
+      </p>
+
+
+      <h2 style="margin-top:40px;">
+        Why use a Word Counter?
+      </h2>
+
+      <p
+        style="max-width:800px; margin:0 auto; line-height:1.8;"
+      >
+        Knowing your word and character count can help you keep
+        your content within a specific limit and make your writing
+        easier to manage.
+      </p>
+
+    </section>
+
+
+
+    <!-- FAQ -->
+
+    <section class="about">
+
+      <h2>
+        Frequently Asked Questions
+      </h2>
+
+      <div class="features">
+
+        <div>
+
+          <b>
+            Is this Word Counter free?
+          </b>
+
+          <p>
+            Yes. CreatorKit provides this tool for free.
+          </p>
+
+        </div>
+
+        <div>
+
+          <b>
+            Does the counter work while typing?
+          </b>
+
+          <p>
+            Yes. The results update automatically as you type.
+          </p>
+
+        </div>
+
+        <div>
+
+          <b>
+            Is my text uploaded anywhere?
+          </b>
+
+          <p>
+            No. The counting happens directly in your browser.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 CreatorKit · Free tools for creators
+    </p>
+
+    <p>
+
+      <a href="/creatorkit/privacy.html">
+        Privacy Policy
+      </a>
+
+      ·
+
+      <a href="/creatorkit/terms.html">
+        Terms & Conditions
+      </a>
+
+      ·
+
+      <a href="/creatorkit/about.html">
+        About Us
+      </a>
+
+      ·
+
+      <a href="/creatorkit/contact.html">
+        Contact
+      </a>
+
+    </p>
+
+  </footer>
+
+
+
+  <!-- WORD COUNTER SCRIPT -->
+
+  <script>
+
+    function countText() {
+
+      const text =
+        document
+          .getElementById("wordText")
+          .value;
+
+
+      const result =
+        document.getElementById("wordResult");
+
+
+      const trimmedText =
+        text.trim();
+
+
+      const words =
+        trimmedText === ""
+          ? 0
+          : trimmedText.split(/\s+/).length;
+
+
+      const characters =
+        text.length;
+
+
+      const charactersWithoutSpaces =
+        text.replace(/\s/g, "").length;
+
+
+      result.innerHTML =
+        `Words: ${words} · Characters: ${characters} · Characters without spaces: ${charactersWithoutSpaces}`;
+
+    }
+
+  </script>
+
+
+</body>
+
+</html>
