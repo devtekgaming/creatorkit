@@ -1,409 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
-    content="Free Content Ideas Generator by CreatorKit. Generate creative YouTube, Instagram, Shorts and gaming content ideas instantly."
+    content="Free Content Ideas Generator by CreatorKit."
   >
 
-  <meta
-    name="keywords"
-    content="content ideas generator, free content ideas, YouTube ideas, Instagram ideas, Shorts ideas, gaming content ideas, CreatorKit"
-  >
-
-  <meta name="robots" content="index, follow">
-
-  <meta
-    property="og:title"
-    content="Free Content Ideas Generator — CreatorKit"
-  >
-
-  <meta
-    property="og:description"
-    content="Generate creative content ideas for YouTube, Instagram, Shorts and gaming instantly."
-  >
-
-  <meta
-    property="og:url"
-    content="https://devtekgaming.github.io/creatorkit/content-ideas-generator.html"
-  >
-
-  <meta property="og:type" content="website">
-
-  <title>Content Ideas Generator — Free Tool | CreatorKit</title>
+  <title>Content Ideas Generator — CreatorKit</title>
 
   <link rel="stylesheet" href="style.css">
-</head>
 
+</head>
 
 <body>
 
-  <!-- HEADER -->
+<header>
 
-  <header>
+  <div class="nav">
 
-    <div class="nav">
+    <a class="logo" href="/creatorkit/">
+      Creator<span>Kit</span>
+    </a>
 
-      <a
-        class="logo"
-        href="/creatorkit/"
-      >
-        Creator<span>Kit</span>
-      </a>
+    <a class="nav-btn" href="/creatorkit/">
+      Home
+    </a>
 
-      <a
-        class="nav-btn"
-        href="/creatorkit/"
-      >
-        All Tools
-      </a>
+  </div>
 
-    </div>
+</header>
 
-  </header>
 
+<main>
 
+<section class="tool-page">
 
-  <!-- MAIN -->
+  <div class="badge">
+    💡 FREE CREATOR TOOL
+  </div>
 
-  <main>
+  <h1>
+    Content Ideas Generator
+  </h1>
 
-    <!-- HERO -->
+  <p class="description">
+    Generate fresh content ideas for YouTube, Instagram, Shorts and Reels.
+  </p>
 
-    <section class="hero">
 
-      <p class="badge">
-        💡 FREE CREATOR TOOL
-      </p>
+  <div class="card">
 
-      <h1>
-        Content Ideas<br>
-        <span>Generator</span>
-      </h1>
+    <input
+      id="topic"
+      type="text"
+      placeholder="e.g. gaming"
+    >
 
-      <p class="sub">
-        Never run out of content ideas. Generate ideas for
-        YouTube, Instagram, Shorts, Reels and gaming.
-      </p>
+    <button onclick="generateIdeas()">
+      Generate Ideas
+    </button>
 
-    </section>
+    <div
+      id="result"
+      class="result"
+    ></div>
 
+  </div>
 
+</section>
 
-    <!-- TOOL -->
+</main>
 
-    <section class="tools">
 
-      <div class="grid">
+<footer>
 
-        <article class="card">
+  <p>
+    © 2026 CreatorKit · Free tools for creators
+  </p>
 
-          <div class="icon">
-            💡
-          </div>
+</footer>
 
-          <h2>
-            Generate Content Ideas
-          </h2>
 
-          <p>
-            Enter your niche or topic and get fresh content ideas.
-          </p>
+<script>
 
-          <input
-            id="ideaTopic"
-            type="text"
-            placeholder="e.g. gaming"
-          >
+function generateIdeas() {
 
-          <button onclick="generateIdeas()">
-            Generate Ideas
-          </button>
+  const topic =
+    document
+      .getElementById("topic")
+      .value
+      .trim() || "your niche";
 
-          <div
-            id="ideaResult"
-            class="result"
-          ></div>
 
-        </article>
+  const ideas = [
 
-      </div>
+    `🎬 1. Beginner's Guide to ${topic}`,
 
-    </section>
+    `🔥 2. 5 Things Nobody Tells You About ${topic}`,
 
+    `💡 3. Common Mistakes People Make With ${topic}`,
 
+    `⚡ 4. ${topic} Tips That Actually Work`,
 
-    <!-- AD -->
+    `👀 5. I Tried ${topic} for 7 Days`,
 
-    <div class="ad-slot">
-      ADVERTISEMENT
-    </div>
+    `🏆 6. Best ${topic} Setup for Beginners`,
 
+    `🚨 7. Things I Wish I Knew Before Starting ${topic}`,
 
+    `📊 8. ${topic}: What Changed This Year?`,
 
-    <!-- HOW TO USE -->
+    `🎯 9. ${topic} Challenge`,
 
-    <section class="about">
+    `💬 10. My Honest Opinion About ${topic}`
 
-      <h2>
-        How to use the Content Ideas Generator
-      </h2>
+  ];
 
-      <div class="features">
 
-        <div>
+  const result =
+    document.getElementById("result");
 
-          <b>
-            1️⃣ Enter your niche
-          </b>
 
-          <p>
-            Type your content niche or topic.
-          </p>
+  result.innerHTML =
+    ideas.join("<br><br>") +
+    '<br><button class="copy-btn" onclick="copyResult()">📋 Copy Result</button>';
 
-        </div>
+}
 
 
-        <div>
+function copyResult() {
 
-          <b>
-            2️⃣ Generate ideas
-          </b>
+  const result =
+    document.getElementById("result");
 
-          <p>
-            Click the Generate Ideas button.
-          </p>
+  const text =
+    result.innerText
+      .replace("📋 Copy Result", "")
+      .trim();
 
-        </div>
+  navigator.clipboard.writeText(text);
 
+  const button =
+    result.querySelector(".copy-btn");
 
-        <div>
+  button.textContent =
+    "✓ Copied!";
 
-          <b>
-            3️⃣ Start creating
-          </b>
+  setTimeout(() => {
 
-          <p>
-            Pick an idea and turn it into your next post or video.
-          </p>
+    button.textContent =
+      "📋 Copy Result";
 
-        </div>
+  }, 1800);
 
-      </div>
+}
 
-    </section>
-
-
-
-    <!-- SEO CONTENT -->
-
-    <section class="about">
-
-      <h2>
-        What is a Content Ideas Generator?
-      </h2>
-
-      <p
-        style="max-width:800px; margin:0 auto; line-height:1.8;"
-      >
-        CreatorKit's Content Ideas Generator is a free brainstorming
-        tool that helps creators find new topics for videos, posts,
-        Shorts and Reels. Enter a niche and explore different content
-        concepts instantly.
-      </p>
-
-
-      <h2 style="margin-top:40px;">
-        Who can use this tool?
-      </h2>
-
-      <p
-        style="max-width:800px; margin:0 auto; line-height:1.8;"
-      >
-        YouTubers, Instagram creators, gamers, vloggers and
-        social media creators can use this tool to find ideas
-        and plan future content.
-      </p>
-
-    </section>
-
-
-
-    <!-- FAQ -->
-
-    <section class="about">
-
-      <h2>
-        Frequently Asked Questions
-      </h2>
-
-      <div class="features">
-
-        <div>
-
-          <b>
-            Is this Content Ideas Generator free?
-          </b>
-
-          <p>
-            Yes. CreatorKit provides this tool for free.
-          </p>
-
-        </div>
-
-
-        <div>
-
-          <b>
-            Do I need an account?
-          </b>
-
-          <p>
-            No signup or account is required.
-          </p>
-
-        </div>
-
-
-        <div>
-
-          <b>
-            What topics can I use?
-          </b>
-
-          <p>
-            You can enter gaming, technology, fitness,
-            education, lifestyle or almost any other niche.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <p>
-      © 2026 CreatorKit · Free tools for creators
-    </p>
-
-    <p>
-
-      <a href="/creatorkit/privacy.html">
-        Privacy Policy
-      </a>
-
-      ·
-
-      <a href="/creatorkit/terms.html">
-        Terms & Conditions
-      </a>
-
-      ·
-
-      <a href="/creatorkit/about.html">
-        About Us
-      </a>
-
-      ·
-
-      <a href="/creatorkit/contact.html">
-        Contact
-      </a>
-
-    </p>
-
-  </footer>
-
-
-
-  <!-- CONTENT IDEAS SCRIPT -->
-
-  <script>
-
-    function generateIdeas() {
-
-      const topic =
-        document
-          .getElementById("ideaTopic")
-          .value
-          .trim();
-
-
-      const result =
-        document.getElementById("ideaResult");
-
-
-      if (!topic) {
-
-        result.innerHTML =
-          "Please enter a niche or topic.";
-
-        return;
-
-      }
-
-
-      const ideas = [
-
-        `🔥 10 Things Beginners Should Know About ${topic}`,
-
-        `🎬 My Ultimate ${topic} Setup / Guide`,
-
-        `💡 5 Mistakes People Make With ${topic}`,
-
-        `🏆 Beginner vs Expert: ${topic}`,
-
-        `🔥 I Tried ${topic} for 7 Days — Here's What Happened`,
-
-        `🎯 The Best Tips for Improving at ${topic}`,
-
-        `💰 Is ${topic} Worth It in 2026?`,
-
-        `🧠 Things I Wish I Knew Before Starting ${topic}`,
-
-        `⚡ ${topic} Hacks You Should Know`,
-
-        `🚀 The Future of ${topic}`,
-
-        `📊 My Honest Experience With ${topic}`,
-
-        `🎮 ${topic} Challenge — Can I Do It?`,
-
-        `🔍 Everything You Need to Know About ${topic}`,
-
-        `🔥 Top 5 ${topic} Ideas You Should Try`,
-
-        `🎥 Behind the Scenes of My ${topic} Content`
-
-      ];
-
-
-      result.innerHTML =
-        ideas
-          .map((idea, index) =>
-            `<div style="margin-bottom:10px;">
-              <b>${index + 1}.</b> ${idea}
-            </div>`
-          )
-          .join("");
-
-    }
-
-  </script>
-
+</script>
 
 </body>
-
 </html>
