@@ -1,409 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
-    content="Free Caption Generator by CreatorKit. Generate creative captions for Instagram, YouTube, Reels, Shorts and social media posts."
+    content="Free Instagram and social media Caption Generator by CreatorKit."
   >
 
-  <meta
-    name="keywords"
-    content="caption generator, free caption generator, Instagram caption generator, social media captions, gaming captions, CreatorKit"
-  >
-
-  <meta name="robots" content="index, follow">
-
-  <meta
-    property="og:title"
-    content="Free Caption Generator — CreatorKit"
-  >
-
-  <meta
-    property="og:description"
-    content="Generate creative social media captions instantly with CreatorKit."
-  >
-
-  <meta
-    property="og:url"
-    content="https://devtekgaming.github.io/creatorkit/caption-generator.html"
-  >
-
-  <meta property="og:type" content="website">
-
-  <title>Caption Generator — Free Tool | CreatorKit</title>
+  <title>Caption Generator — CreatorKit</title>
 
   <link rel="stylesheet" href="style.css">
-</head>
 
+</head>
 
 <body>
 
-  <!-- HEADER -->
+<header>
 
-  <header>
+  <div class="nav">
 
-    <div class="nav">
+    <a class="logo" href="/creatorkit/">
+      Creator<span>Kit</span>
+    </a>
 
-      <a
-        class="logo"
-        href="/creatorkit/"
-      >
-        Creator<span>Kit</span>
-      </a>
+    <a class="nav-btn" href="/creatorkit/">
+      Home
+    </a>
 
-      <a
-        class="nav-btn"
-        href="/creatorkit/"
-      >
-        All Tools
-      </a>
+  </div>
 
-    </div>
+</header>
 
-  </header>
 
+<main>
 
+<section class="tool-page">
 
-  <!-- MAIN -->
+  <div class="badge">
+    ✍️ FREE CREATOR TOOL
+  </div>
 
-  <main>
+  <h1>
+    Caption Generator
+  </h1>
 
-    <!-- HERO -->
+  <p class="description">
+    Generate engaging captions for Instagram posts, Reels, Shorts and social media.
+  </p>
 
-    <section class="hero">
 
-      <p class="badge">
-        ✍️ FREE CREATOR TOOL
-      </p>
+  <div class="card">
 
-      <h1>
-        Caption<br>
-        <span>Generator</span>
-      </h1>
+    <input
+      id="topic"
+      type="text"
+      placeholder="e.g. new gaming setup"
+    >
 
-      <p class="sub">
-        Generate creative captions for Instagram, YouTube,
-        Reels, Shorts and social media posts.
-      </p>
+    <button onclick="generateCaptions()">
+      Generate Captions
+    </button>
 
-    </section>
+    <div
+      id="result"
+      class="result"
+    ></div>
 
+  </div>
 
+</section>
 
-    <!-- TOOL -->
+</main>
 
-    <section class="tools">
 
-      <div class="grid">
+<footer>
 
-        <article class="card">
+  <p>
+    © 2026 CreatorKit · Free tools for creators
+  </p>
 
-          <div class="icon">
-            ✍️
-          </div>
+</footer>
 
-          <h2>
-            Generate Captions
-          </h2>
 
-          <p>
-            Enter your post topic and get caption ideas instantly.
-          </p>
+<script>
 
-          <input
-            id="captionTopic"
-            type="text"
-            placeholder="e.g. new gaming setup"
-          >
+function generateCaptions() {
 
-          <button onclick="generateCaptions()">
-            Generate Captions
-          </button>
+  const topic =
+    document
+      .getElementById("topic")
+      .value
+      .trim() || "this moment";
 
-          <div
-            id="captionResult"
-            class="result"
-          ></div>
 
-        </article>
+  const captions = [
 
-      </div>
+    `🔥 ${topic} and we're just getting started!`,
 
-    </section>
+    `✨ New day. New content. New goals. 🚀`,
 
+    `🎬 Behind the scenes of ${topic}.`,
 
+    `⚡ Creating memories, one post at a time.`,
 
-    <!-- AD -->
+    `🚀 Just another step in the journey.`,
 
-    <div class="ad-slot">
-      ADVERTISEMENT
-    </div>
+    `👀 Wait until you see what's coming next...`,
 
+    `💯 Would you try ${topic}? Let me know!`,
 
+    `🎯 Focused. Consistent. Creating.`
 
-    <!-- HOW TO USE -->
+  ];
 
-    <section class="about">
 
-      <h2>
-        How to use the Caption Generator
-      </h2>
+  const result =
+    document.getElementById("result");
 
-      <div class="features">
 
-        <div>
+  result.innerHTML =
+    captions.join("<br><br>") +
+    '<br><button class="copy-btn" onclick="copyResult()">📋 Copy Result</button>';
 
-          <b>
-            1️⃣ Enter your topic
-          </b>
+}
 
-          <p>
-            Type what your post or video is about.
-          </p>
 
-        </div>
+function copyResult() {
 
+  const result =
+    document.getElementById("result");
 
-        <div>
+  const text =
+    result.innerText
+      .replace("📋 Copy Result", "")
+      .trim();
 
-          <b>
-            2️⃣ Generate captions
-          </b>
+  navigator.clipboard.writeText(text);
 
-          <p>
-            Click the Generate Captions button.
-          </p>
+  const button =
+    result.querySelector(".copy-btn");
 
-        </div>
+  button.textContent =
+    "✓ Copied!";
 
+  setTimeout(() => {
 
-        <div>
+    button.textContent =
+      "📋 Copy Result";
 
-          <b>
-            3️⃣ Choose your favorite
-          </b>
+  }, 1800);
 
-          <p>
-            Pick and customize a caption for your post.
-          </p>
+}
 
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- SEO CONTENT -->
-
-    <section class="about">
-
-      <h2>
-        What is a Caption Generator?
-      </h2>
-
-      <p
-        style="max-width:800px; margin:0 auto; line-height:1.8;"
-      >
-        CreatorKit's Caption Generator is a free tool that helps
-        creators brainstorm captions for social media posts.
-        Enter a topic and generate multiple caption ideas for
-        Instagram, YouTube, Reels, Shorts and other platforms.
-      </p>
-
-
-      <h2 style="margin-top:40px;">
-        Who can use this tool?
-      </h2>
-
-      <p
-        style="max-width:800px; margin:0 auto; line-height:1.8;"
-      >
-        Instagram creators, YouTubers, gamers, vloggers and
-        social media creators can use the Caption Generator
-        to quickly create ideas for their posts.
-      </p>
-
-    </section>
-
-
-
-    <!-- FAQ -->
-
-    <section class="about">
-
-      <h2>
-        Frequently Asked Questions
-      </h2>
-
-      <div class="features">
-
-        <div>
-
-          <b>
-            Is the Caption Generator free?
-          </b>
-
-          <p>
-            Yes. CreatorKit provides this tool for free.
-          </p>
-
-        </div>
-
-
-        <div>
-
-          <b>
-            Do I need an account?
-          </b>
-
-          <p>
-            No signup or account is required.
-          </p>
-
-        </div>
-
-
-        <div>
-
-          <b>
-            Can I use the generated captions?
-          </b>
-
-          <p>
-            Yes. You can use the ideas as a starting point
-            and customize them for your content.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <p>
-      © 2026 CreatorKit · Free tools for creators
-    </p>
-
-    <p>
-
-      <a href="/creatorkit/privacy.html">
-        Privacy Policy
-      </a>
-
-      ·
-
-      <a href="/creatorkit/terms.html">
-        Terms & Conditions
-      </a>
-
-      ·
-
-      <a href="/creatorkit/about.html">
-        About Us
-      </a>
-
-      ·
-
-      <a href="/creatorkit/contact.html">
-        Contact
-      </a>
-
-    </p>
-
-  </footer>
-
-
-
-  <!-- CAPTION GENERATOR SCRIPT -->
-
-  <script>
-
-    function generateCaptions() {
-
-      const topic =
-        document
-          .getElementById("captionTopic")
-          .value
-          .trim();
-
-
-      const result =
-        document.getElementById("captionResult");
-
-
-      if (!topic) {
-
-        result.innerHTML =
-          "Please enter a post topic.";
-
-        return;
-
-      }
-
-
-      const captions = [
-
-        `🔥 ${topic} — making every moment count.`,
-
-        `✨ New day. New vibes. New ${topic}.`,
-
-        `🚀 Just another step in the ${topic} journey.`,
-
-        `🎮 ${topic} mode: ON 🔥`,
-
-        `⚡ Small moments. Big memories. ${topic}.`,
-
-        `🔥 This is what ${topic} looks like.`,
-
-        `💯 Creating memories with ${topic}.`,
-
-        `🚀 Leveling up with ${topic}.`,
-
-        `✨ Built different. ${topic}.`,
-
-        `🔥 Another one for the books — ${topic}.`,
-
-        `🎯 Focused on ${topic}. Nothing else.`,
-
-        `💫 Just getting started with ${topic}.`,
-
-        `⚡ New setup. New energy. ${topic}.`,
-
-        `🔥 If you know, you know. ${topic}.`,
-
-        `🚀 Watch this space — ${topic} is just the beginning.`
-
-      ];
-
-
-      result.innerHTML =
-        captions
-          .map((caption, index) =>
-            `<div style="margin-bottom:10px;">
-              <b>${index + 1}.</b> ${caption}
-            </div>`
-          )
-          .join("");
-
-    }
-
-  </script>
-
+</script>
 
 </body>
-
 </html>
