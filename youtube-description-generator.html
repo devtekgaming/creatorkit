@@ -1,403 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
-    content="Free YouTube Description Generator by CreatorKit. Create ready-to-edit YouTube video descriptions for gaming, tutorials, vlogs and creator content."
+    content="Free YouTube Description Generator by CreatorKit. Create descriptions for YouTube videos and Shorts."
   >
 
-  <meta
-    name="keywords"
-    content="YouTube description generator, free YouTube description generator, video description generator, gaming description, YouTube SEO, CreatorKit"
-  >
-
-  <meta name="robots" content="index, follow">
-
-  <meta
-    property="og:title"
-    content="Free YouTube Description Generator — CreatorKit"
-  >
-
-  <meta
-    property="og:description"
-    content="Generate ready-to-edit YouTube video descriptions instantly with CreatorKit."
-  >
-
-  <meta
-    property="og:url"
-    content="https://devtekgaming.github.io/creatorkit/youtube-description-generator.html"
-  >
-
-  <meta property="og:type" content="website">
-
-  <title>YouTube Description Generator — Free Tool | CreatorKit</title>
+  <title>YouTube Description Generator — CreatorKit</title>
 
   <link rel="stylesheet" href="style.css">
-</head>
 
+</head>
 
 <body>
 
-  <!-- HEADER -->
+<header>
 
-  <header>
+  <div class="nav">
 
-    <div class="nav">
+    <a class="logo" href="/creatorkit/">
+      Creator<span>Kit</span>
+    </a>
 
-      <a
-        class="logo"
-        href="/creatorkit/"
-      >
-        Creator<span>Kit</span>
-      </a>
+    <a class="nav-btn" href="/creatorkit/">
+      Home
+    </a>
 
-      <a
-        class="nav-btn"
-        href="/creatorkit/"
-      >
-        All Tools
-      </a>
+  </div>
 
-    </div>
+</header>
 
-  </header>
 
+<main>
 
+<section class="tool-page">
 
-  <!-- MAIN -->
+  <div class="badge">
+    📝 FREE CREATOR TOOL
+  </div>
 
-  <main>
+  <h1>
+    YouTube Description Generator
+  </h1>
 
-    <!-- HERO -->
+  <p class="description">
+    Create ready-to-edit YouTube descriptions for videos, Shorts and gaming content.
+  </p>
 
-    <section class="hero">
 
-      <p class="badge">
-        📝 FREE YOUTUBE TOOL
-      </p>
+  <div class="card">
 
-      <h1>
-        YouTube Description<br>
-        <span>Generator</span>
-      </h1>
+    <input
+      id="topic"
+      type="text"
+      placeholder="e.g. gaming monitor unboxing"
+    >
 
-      <p class="sub">
-        Create ready-to-edit YouTube descriptions for gaming,
-        tutorials, vlogs, Shorts and creator content.
-      </p>
+    <button onclick="generateDescription()">
+      Generate Description
+    </button>
 
-    </section>
+    <div
+      id="result"
+      class="result"
+    ></div>
 
+  </div>
 
+</section>
 
-    <!-- TOOL -->
+</main>
 
-    <section class="tools">
 
-      <div class="grid">
+<footer>
 
-        <article class="card">
+  <p>
+    © 2026 CreatorKit · Free tools for creators
+  </p>
 
-          <div class="icon">
-            📝
-          </div>
+</footer>
 
-          <h2>
-            Generate Description
-          </h2>
 
-          <p>
-            Enter your video topic and create a description instantly.
-          </p>
+<script>
 
-          <input
-            id="descriptionTopic"
-            type="text"
-            placeholder="e.g. gaming monitor unboxing"
-          >
+function generateDescription() {
 
-          <button onclick="generateDescription()">
-            Generate Description
-          </button>
+  const topic =
+    document
+      .getElementById("topic")
+      .value
+      .trim() || "this video";
 
-          <div
-            id="descriptionResult"
-            class="result"
-          ></div>
 
-        </article>
+  const description =
 
-      </div>
+`🔥 Thanks for watching!
 
-    </section>
+In this video, we're checking out ${topic} and sharing everything you need to know.
 
+If you enjoyed the video:
 
+👍 Like the video
+💬 Share your thoughts in the comments
+🔔 Subscribe for more content
 
-    <!-- AD -->
+🎮 More creator and gaming tools:
+https://devtekgaming.github.io/creatorkit/
 
-    <div class="ad-slot">
-      ADVERTISEMENT
-    </div>
+Thanks for supporting CreatorKit! ❤️
 
+#youtube #creator #gaming #shorts #contentcreator`;
 
 
-    <!-- HOW TO USE -->
+  const result =
+    document.getElementById("result");
 
-    <section class="about">
 
-      <h2>
-        How to use the YouTube Description Generator
-      </h2>
+  result.innerHTML =
+    description.replace(/\n/g, "<br>") +
+    '<br><br><button class="copy-btn" onclick="copyResult()">📋 Copy Result</button>';
 
-      <div class="features">
+}
 
-        <div>
 
-          <b>
-            1️⃣ Enter your topic
-          </b>
+function copyResult() {
 
-          <p>
-            Type the main topic of your YouTube video.
-          </p>
+  const result =
+    document.getElementById("result");
 
-        </div>
+  const text =
+    result.innerText
+      .replace("📋 Copy Result", "")
+      .trim();
 
+  navigator.clipboard.writeText(text);
 
-        <div>
+  const button =
+    result.querySelector(".copy-btn");
 
-          <b>
-            2️⃣ Generate
-          </b>
+  button.textContent =
+    "✓ Copied!";
 
-          <p>
-            Click the Generate Description button.
-          </p>
+  setTimeout(() => {
 
-        </div>
+    button.textContent =
+      "📋 Copy Result";
 
+  }, 1800);
 
-        <div>
+}
 
-          <b>
-            3️⃣ Edit and use
-          </b>
-
-          <p>
-            Customize the generated description before publishing.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- SEO CONTENT -->
-
-    <section class="about">
-
-      <h2>
-        What is a YouTube Description Generator?
-      </h2>
-
-      <p
-        style="max-width:800px; margin:0 auto; line-height:1.8;"
-      >
-        CreatorKit's YouTube Description Generator helps creators
-        create a starting point for their video descriptions.
-        Enter your video topic and generate a structured description
-        that you can edit before publishing.
-      </p>
-
-
-      <h2 style="margin-top:40px;">
-        Why are YouTube descriptions useful?
-      </h2>
-
-      <p
-        style="max-width:800px; margin:0 auto; line-height:1.8;"
-      >
-        A useful video description can give viewers more information
-        about your content, include important links and explain what
-        your video is about.
-      </p>
-
-    </section>
-
-
-
-    <!-- FAQ -->
-
-    <section class="about">
-
-      <h2>
-        Frequently Asked Questions
-      </h2>
-
-      <div class="features">
-
-        <div>
-
-          <b>
-            Is this YouTube Description Generator free?
-          </b>
-
-          <p>
-            Yes. CreatorKit provides this tool for free.
-          </p>
-
-        </div>
-
-
-        <div>
-
-          <b>
-            Do I need an account?
-          </b>
-
-          <p>
-            No signup or account is required.
-          </p>
-
-        </div>
-
-
-        <div>
-
-          <b>
-            Can I edit the generated description?
-          </b>
-
-          <p>
-            Yes. The generated text is a starting point,
-            so you can customize it for your video.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <p>
-      © 2026 CreatorKit · Free tools for creators
-    </p>
-
-    <p>
-
-      <a href="/creatorkit/privacy.html">
-        Privacy Policy
-      </a>
-
-      ·
-
-      <a href="/creatorkit/terms.html">
-        Terms & Conditions
-      </a>
-
-      ·
-
-      <a href="/creatorkit/about.html">
-        About Us
-      </a>
-
-      ·
-
-      <a href="/creatorkit/contact.html">
-        Contact
-      </a>
-
-    </p>
-
-  </footer>
-
-
-
-  <!-- DESCRIPTION GENERATOR SCRIPT -->
-
-  <script>
-
-    function generateDescription() {
-
-      const topic =
-        document
-          .getElementById("descriptionTopic")
-          .value
-          .trim();
-
-
-      const result =
-        document.getElementById("descriptionResult");
-
-
-      if (!topic) {
-
-        result.innerHTML =
-          "Please enter your video topic.";
-
-        return;
-
-      }
-
-
-      const description =
-
-`🔥 Welcome back to CreatorKit!
-
-In today's video, we're checking out ${topic}.
-
-If you enjoy the video, don't forget to LIKE 👍
-and SUBSCRIBE 🔔 for more content.
-
-💬 Let me know your thoughts in the comments!
-
-━━━━━━━━━━━━━━━━━━
-
-📌 VIDEO TOPIC
-${topic}
-
-━━━━━━━━━━━━━━━━━━
-
-🚀 FOLLOW FOR MORE CONTENT
-
-YouTube:
-Your YouTube Channel
-
-Instagram:
-Your Instagram
-
-━━━━━━━━━━━━━━━━━━
-
-#YouTube #Creator #Gaming`;
-
-
-      result.innerHTML =
-        `<div style="
-          white-space:pre-wrap;
-          text-align:left;
-          line-height:1.7;
-        ">${description}</div>`;
-
-    }
-
-  </script>
-
+</script>
 
 </body>
-
 </html>
