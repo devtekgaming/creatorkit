@@ -15,22 +15,25 @@
   <!-- SEO -->
   <meta
     name="description"
-    content="Free creator tools for YouTubers, Instagram creators and gamers. Generate YouTube titles, hooks, hashtags, usernames, Instagram bios and count words instantly."
+    content="Free creator tools for YouTubers, Instagram creators and gamers. Generate YouTube titles, hooks, hashtags, usernames, Instagram bios, captions, CTAs, descriptions, content ideas and count words instantly."
   >
 
   <meta
     name="keywords"
-    content="free creator tools, YouTube title generator, YouTube hook generator, hashtag generator, username generator, Instagram bio generator, word counter, creator tools"
+    content="free creator tools, YouTube title generator, YouTube hook generator, hashtag generator, username generator, Instagram bio generator, caption generator, CTA generator, YouTube description generator, content ideas generator, word counter"
   >
 
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="CreatorKit — Free Creator Tools">
+  <meta
+    property="og:title"
+    content="CreatorKit — Free Creator Tools"
+  >
 
   <meta
     property="og:description"
-    content="Free tools for YouTubers, Instagram creators and gamers. Create titles, hooks, hashtags, usernames and bios instantly."
+    content="Free tools for YouTubers, Instagram creators and gamers. Create titles, hooks, hashtags, usernames, captions, bios and content ideas instantly."
   >
 
   <meta
@@ -38,11 +41,15 @@
     content="https://devtekgaming.github.io/creatorkit/"
   >
 
-  <meta property="og:type" content="website">
+  <meta
+    property="og:type"
+    content="website"
+  >
 
   <title>CreatorKit — Free Creator Tools for Creators</title>
 
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 
@@ -61,7 +68,6 @@
       >
         Creator<span>Kit</span>
       </a>
-
 
       <a
         class="nav-btn"
@@ -89,18 +95,15 @@
         ⚡ 100% FREE CREATOR TOOLS
       </p>
 
-
       <h1>
         Create faster.<br>
         <span>Grow smarter.</span>
       </h1>
 
-
       <p class="sub">
         Simple free tools for YouTubers, Instagram creators and gamers.
         Generate content ideas instantly. No signup required.
       </p>
-
 
       <a
         class="primary"
@@ -132,7 +135,6 @@
         Free Creator Tools
       </h2>
 
-
       <p class="section-sub">
         Pick a tool and get results instantly.
       </p>
@@ -142,24 +144,19 @@
       <div class="grid">
 
 
-        <!-- TOOL 1: TITLE GENERATOR -->
+        <!-- TOOL 1 -->
 
         <article class="card">
 
-          <div class="icon">
-            🎬
-          </div>
-
+          <div class="icon">🎬</div>
 
           <h3>
             YouTube Title Generator
           </h3>
 
-
           <p>
             Generate clickable title ideas for your next video.
           </p>
-
 
           <input
             id="titleTopic"
@@ -167,13 +164,9 @@
             placeholder="e.g. gaming monitor unboxing"
           >
 
-
-          <button
-            onclick="generateTitles()"
-          >
+          <button onclick="generateTitles()">
             Generate Titles
           </button>
-
 
           <div
             id="titleResult"
@@ -184,24 +177,19 @@
 
 
 
-        <!-- TOOL 2: HASHTAG GENERATOR -->
+        <!-- TOOL 2 -->
 
         <article class="card">
 
-          <div class="icon">
-            #️⃣
-          </div>
-
+          <div class="icon">#️⃣</div>
 
           <h3>
             Hashtag Generator
           </h3>
 
-
           <p>
             Get relevant hashtags from your content topic.
           </p>
-
 
           <input
             id="hashTopic"
@@ -209,13 +197,9 @@
             placeholder="e.g. gaming setup"
           >
 
-
-          <button
-            onclick="generateHashtags()"
-          >
+          <button onclick="generateHashtags()">
             Generate Hashtags
           </button>
-
 
           <div
             id="hashResult"
@@ -226,24 +210,19 @@
 
 
 
-        <!-- TOOL 3: USERNAME GENERATOR -->
+        <!-- TOOL 3 -->
 
         <article class="card">
 
-          <div class="icon">
-            👤
-          </div>
-
+          <div class="icon">👤</div>
 
           <h3>
             Username Generator
           </h3>
 
-
           <p>
             Create quick username ideas for social media.
           </p>
-
 
           <input
             id="userTopic"
@@ -251,13 +230,9 @@
             placeholder="e.g. Dev Gaming"
           >
 
-
-          <button
-            onclick="generateUsernames()"
-          >
+          <button onclick="generateUsernames()">
             Generate Usernames
           </button>
-
 
           <div
             id="userResult"
@@ -268,24 +243,19 @@
 
 
 
-        <!-- TOOL 4: WORD COUNTER -->
+        <!-- TOOL 4 -->
 
         <article class="card">
 
-          <div class="icon">
-            🔢
-          </div>
-
+          <div class="icon">🔢</div>
 
           <h3>
             Word Counter
           </h3>
 
-
           <p>
             Count words and characters in your text.
           </p>
-
 
           <textarea
             id="wordText"
@@ -293,13 +263,9 @@
             placeholder="Paste your text here..."
           ></textarea>
 
-
-          <button
-            onclick="countWords()"
-          >
+          <button onclick="countWords()">
             Count
           </button>
-
 
           <div
             id="wordResult"
@@ -312,24 +278,19 @@
 
 
 
-        <!-- TOOL 5: YOUTUBE HOOK GENERATOR -->
+        <!-- TOOL 5 -->
 
         <article class="card">
 
-          <div class="icon">
-            🪝
-          </div>
-
+          <div class="icon">🪝</div>
 
           <h3>
             YouTube Hook Generator
           </h3>
 
-
           <p>
             Create strong opening hook ideas for your videos.
           </p>
-
 
           <input
             id="hookTopic"
@@ -337,13 +298,9 @@
             placeholder="e.g. new gaming setup"
           >
 
-
-          <button
-            onclick="generateHooks()"
-          >
+          <button onclick="generateHooks()">
             Generate Hooks
           </button>
-
 
           <div
             id="hookResult"
@@ -354,24 +311,19 @@
 
 
 
-        <!-- TOOL 6: INSTAGRAM BIO GENERATOR -->
+        <!-- TOOL 6 -->
 
         <article class="card">
 
-          <div class="icon">
-            ✍️
-          </div>
-
+          <div class="icon">✍️</div>
 
           <h3>
             Instagram Bio Generator
           </h3>
 
-
           <p>
             Generate simple Instagram bio ideas for your creator profile.
           </p>
-
 
           <input
             id="bioTopic"
@@ -379,16 +331,144 @@
             placeholder="e.g. gaming creator"
           >
 
-
-          <button
-            onclick="generateBios()"
-          >
+          <button onclick="generateBios()">
             Generate Bios
           </button>
 
-
           <div
             id="bioResult"
+            class="result"
+          ></div>
+
+        </article>
+
+
+
+        <!-- TOOL 7 -->
+
+        <article class="card">
+
+          <div class="icon">💡</div>
+
+          <h3>
+            Content Ideas Generator
+          </h3>
+
+          <p>
+            Get quick video and Reel ideas for your next content.
+          </p>
+
+          <input
+            id="ideaTopic"
+            type="text"
+            placeholder="e.g. gaming"
+          >
+
+          <button onclick="generateIdeas()">
+            Generate Ideas
+          </button>
+
+          <div
+            id="ideaResult"
+            class="result"
+          ></div>
+
+        </article>
+
+
+
+        <!-- TOOL 8 -->
+
+        <article class="card">
+
+          <div class="icon">📝</div>
+
+          <h3>
+            Caption Generator
+          </h3>
+
+          <p>
+            Generate caption ideas for Instagram, Reels and Shorts.
+          </p>
+
+          <input
+            id="captionTopic"
+            type="text"
+            placeholder="e.g. gaming setup"
+          >
+
+          <button onclick="generateCaptions()">
+            Generate Captions
+          </button>
+
+          <div
+            id="captionResult"
+            class="result"
+          ></div>
+
+        </article>
+
+
+
+        <!-- TOOL 9 -->
+
+        <article class="card">
+
+          <div class="icon">📣</div>
+
+          <h3>
+            CTA Generator
+          </h3>
+
+          <p>
+            Generate calls-to-action to encourage viewers to engage.
+          </p>
+
+          <input
+            id="ctaTopic"
+            type="text"
+            placeholder="e.g. gaming video"
+          >
+
+          <button onclick="generateCTAs()">
+            Generate CTAs
+          </button>
+
+          <div
+            id="ctaResult"
+            class="result"
+          ></div>
+
+        </article>
+
+
+
+        <!-- TOOL 10 -->
+
+        <article class="card">
+
+          <div class="icon">📄</div>
+
+          <h3>
+            YouTube Description Generator
+          </h3>
+
+          <p>
+            Create simple descriptions for your YouTube videos.
+          </p>
+
+          <input
+            id="descriptionTopic"
+            type="text"
+            placeholder="e.g. gaming monitor unboxing"
+          >
+
+          <button onclick="generateDescriptions()">
+            Generate Descriptions
+          </button>
+
+          <div
+            id="descriptionResult"
             class="result"
           ></div>
 
@@ -409,7 +489,7 @@
 
 
 
-    <!-- ABOUT SECTION -->
+    <!-- ABOUT -->
 
     <section class="about">
 
@@ -417,15 +497,11 @@
         Why CreatorKit?
       </h2>
 
-
       <div class="features">
-
 
         <div>
 
-          <b>
-            ⚡ Fast
-          </b>
+          <b>⚡ Fast</b>
 
           <p>
             Instant results in your browser.
@@ -436,9 +512,7 @@
 
         <div>
 
-          <b>
-            🔒 Private
-          </b>
+          <b>🔒 Private</b>
 
           <p>
             Your text stays on your device.
@@ -449,16 +523,13 @@
 
         <div>
 
-          <b>
-            💸 Free
-          </b>
+          <b>💸 Free</b>
 
           <p>
             No account or subscription required.
           </p>
 
         </div>
-
 
       </div>
 
@@ -487,11 +558,9 @@
 
   <footer>
 
-
     <p>
       © 2026 CreatorKit · Free tools for creators
     </p>
-
 
     <p>
 
@@ -519,7 +588,6 @@
 
     </p>
 
-
   </footer>
 
 
@@ -530,11 +598,12 @@
 
 
 
-  <!-- NEW TOOL JAVASCRIPT -->
+  <!-- NEW TOOLS JAVASCRIPT -->
 
   <script>
 
-    /* YouTube Hook Generator */
+
+    /* TOOL 5 — YOUTUBE HOOK */
 
     function generateHooks() {
 
@@ -544,7 +613,6 @@
       const result =
         document.getElementById("hookResult");
 
-
       if (!topic) {
 
         result.innerHTML =
@@ -552,7 +620,6 @@
 
         return;
       }
-
 
       const hooks = [
 
@@ -574,7 +641,6 @@
 
       ];
 
-
       result.innerHTML =
         hooks
           .map((hook, index) =>
@@ -586,7 +652,7 @@
 
 
 
-    /* Instagram Bio Generator */
+    /* TOOL 6 — INSTAGRAM BIO */
 
     function generateBios() {
 
@@ -596,7 +662,6 @@
       const result =
         document.getElementById("bioResult");
 
-
       if (!topic) {
 
         result.innerHTML =
@@ -604,7 +669,6 @@
 
         return;
       }
-
 
       const bios = [
 
@@ -620,7 +684,6 @@
 
       ];
 
-
       result.innerHTML =
         bios
           .map((bio, index) =>
@@ -632,6 +695,225 @@
           .join("");
 
     }
+
+
+
+    /* TOOL 7 — CONTENT IDEAS */
+
+    function generateIdeas() {
+
+      const topic =
+        document.getElementById("ideaTopic").value.trim();
+
+      const result =
+        document.getElementById("ideaResult");
+
+      if (!topic) {
+
+        result.innerHTML =
+          "Please enter a topic.";
+
+        return;
+      }
+
+      const ideas = [
+
+        `🔥 5 things beginners should know about ${topic}`,
+
+        `🎬 My honest experience with ${topic}`,
+
+        `💡 7 tips to improve your ${topic}`,
+
+        `🚀 Beginner vs Pro: ${topic}`,
+
+        `😱 Things nobody tells you about ${topic}`,
+
+        `⚡ Best ${topic} ideas for beginners`,
+
+        `🎯 Common mistakes people make with ${topic}`,
+
+        `🏆 How I would start ${topic} from zero`,
+
+        `👀 ${topic}: What I wish I knew earlier`,
+
+        `🔥 The ultimate ${topic} challenge`
+
+      ];
+
+      result.innerHTML =
+        ideas
+          .map((idea, index) =>
+            `<div>${index + 1}. ${idea}</div>`
+          )
+          .join("");
+
+    }
+
+
+
+    /* TOOL 8 — CAPTION GENERATOR */
+
+    function generateCaptions() {
+
+      const topic =
+        document.getElementById("captionTopic").value.trim();
+
+      const result =
+        document.getElementById("captionResult");
+
+      if (!topic) {
+
+        result.innerHTML =
+          "Please enter a topic.";
+
+        return;
+      }
+
+      const captions = [
+
+        `🔥 New content about ${topic}. What do you think?`,
+
+        `🚀 Just created something around ${topic}. Let me know your thoughts!`,
+
+        `🎮 ${topic} hits different. Who agrees?`,
+
+        `✨ Creating, learning and improving with ${topic}.`,
+
+        `👀 You don't want to miss this ${topic} post.`,
+
+        `💯 One more step forward with ${topic}.`
+
+      ];
+
+      result.innerHTML =
+        captions
+          .map((caption, index) =>
+            `<div style="margin-bottom:8px;">
+              ${index + 1}. ${caption}
+            </div>`
+          )
+          .join("");
+
+    }
+
+
+
+    /* TOOL 9 — CTA GENERATOR */
+
+    function generateCTAs() {
+
+      const topic =
+        document.getElementById("ctaTopic").value.trim();
+
+      const result =
+        document.getElementById("ctaResult");
+
+      if (!topic) {
+
+        result.innerHTML =
+          "Please enter your content topic.";
+
+        return;
+      }
+
+      const ctas = [
+
+        `🔥 Enjoyed this ${topic}? Follow for more!`,
+
+        `👍 Like this content if you want more ${topic}.`,
+
+        `💬 Tell me your opinion about ${topic} in the comments.`,
+
+        `🚀 Follow for more content about ${topic}.`,
+
+        `📲 Share this with someone who loves ${topic}.`,
+
+        `🔔 Follow and stay updated with new ${topic} content.`,
+
+        `👇 Comment your favorite thing about ${topic}.`,
+
+        `❤️ Save this post for later.`
+
+      ];
+
+      result.innerHTML =
+        ctas
+          .map((cta, index) =>
+            `<div style="margin-bottom:8px;">
+              ${index + 1}. ${cta}
+            </div>`
+          )
+          .join("");
+
+    }
+
+
+
+    /* TOOL 10 — YOUTUBE DESCRIPTION */
+
+    function generateDescriptions() {
+
+      const topic =
+        document
+          .getElementById("descriptionTopic")
+          .value
+          .trim();
+
+      const result =
+        document.getElementById("descriptionResult");
+
+      if (!topic) {
+
+        result.innerHTML =
+          "Please enter a video topic.";
+
+        return;
+      }
+
+      const descriptions = [
+
+        `In this video, we're taking a closer look at ${topic}.
+
+Watch until the end for useful tips, ideas and everything you need to know.
+
+If you enjoyed the video, like, comment and subscribe for more content.
+
+#${topic.replace(/\s+/g, "")} #YouTube #CreatorKit`,
+
+
+
+        `Welcome back! Today we're talking about ${topic}.
+
+Whether you're a beginner or already creating content, this video has useful information for you.
+
+Thanks for watching and don't forget to subscribe for more creator content.`,
+
+
+
+        `🔥 ${topic}
+
+In today's video, we explore ${topic} and share some useful ideas and tips.
+
+Let me know what you think in the comments.
+
+👍 Like
+💬 Comment
+🔔 Subscribe for more`
+
+      ];
+
+      result.innerHTML =
+        descriptions
+          .map((description, index) =>
+            `<div style="margin-bottom:15px; white-space:pre-line;">
+              <b>Description ${index + 1}</b><br><br>
+              ${description}
+            </div>`
+          )
+          .join("");
+
+    }
+
 
   </script>
 
