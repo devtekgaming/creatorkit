@@ -6,19 +6,41 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- <meta name="google-site-verification" content="U0823Er0X4TAH7HUAzIUBZOfYNHbjuePGo3FKuz6sg0" /> 
+  <!-- Google Search Console verification -->
+  <meta
+    name="google-site-verification"
+    content="U0823Er0X4TAH7HUAzIUBZOfYNHbjuePGo3FKuz6sg0"
+  >
 
+  <!-- SEO -->
   <meta
     name="description"
-    content="Free creator tools for YouTube, Instagram and content creators. Generate titles, hashtags, usernames and count words instantly."
+    content="Free creator tools for YouTubers, Instagram creators and gamers. Generate YouTube titles, hooks, hashtags, usernames, Instagram bios and count words instantly."
   >
 
   <meta
     name="keywords"
-    content="creator tools, youtube title generator, hashtag generator, username generator, word counter"
+    content="free creator tools, YouTube title generator, YouTube hook generator, hashtag generator, username generator, Instagram bio generator, word counter, creator tools"
   >
 
-  <title>CreatorKit — Free Creator Tools</title>
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CreatorKit — Free Creator Tools">
+
+  <meta
+    property="og:description"
+    content="Free tools for YouTubers, Instagram creators and gamers. Create titles, hooks, hashtags, usernames and bios instantly."
+  >
+
+  <meta
+    property="og:url"
+    content="https://devtekgaming.github.io/creatorkit/"
+  >
+
+  <meta property="og:type" content="website">
+
+  <title>CreatorKit — Free Creator Tools for Creators</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -75,8 +97,8 @@
 
 
       <p class="sub">
-        Simple tools for YouTubers, Instagram creators and gamers.
-        No signup required.
+        Simple free tools for YouTubers, Instagram creators and gamers.
+        Generate content ideas instantly. No signup required.
       </p>
 
 
@@ -120,7 +142,7 @@
       <div class="grid">
 
 
-        <!-- TITLE GENERATOR -->
+        <!-- TOOL 1: TITLE GENERATOR -->
 
         <article class="card">
 
@@ -162,7 +184,7 @@
 
 
 
-        <!-- HASHTAG GENERATOR -->
+        <!-- TOOL 2: HASHTAG GENERATOR -->
 
         <article class="card">
 
@@ -204,7 +226,7 @@
 
 
 
-        <!-- USERNAME GENERATOR -->
+        <!-- TOOL 3: USERNAME GENERATOR -->
 
         <article class="card">
 
@@ -246,7 +268,7 @@
 
 
 
-        <!-- WORD COUNTER -->
+        <!-- TOOL 4: WORD COUNTER -->
 
         <article class="card">
 
@@ -285,6 +307,90 @@
           >
             Words: 0 · Characters: 0
           </div>
+
+        </article>
+
+
+
+        <!-- TOOL 5: YOUTUBE HOOK GENERATOR -->
+
+        <article class="card">
+
+          <div class="icon">
+            🪝
+          </div>
+
+
+          <h3>
+            YouTube Hook Generator
+          </h3>
+
+
+          <p>
+            Create strong opening hook ideas for your videos.
+          </p>
+
+
+          <input
+            id="hookTopic"
+            type="text"
+            placeholder="e.g. new gaming setup"
+          >
+
+
+          <button
+            onclick="generateHooks()"
+          >
+            Generate Hooks
+          </button>
+
+
+          <div
+            id="hookResult"
+            class="result"
+          ></div>
+
+        </article>
+
+
+
+        <!-- TOOL 6: INSTAGRAM BIO GENERATOR -->
+
+        <article class="card">
+
+          <div class="icon">
+            ✍️
+          </div>
+
+
+          <h3>
+            Instagram Bio Generator
+          </h3>
+
+
+          <p>
+            Generate simple Instagram bio ideas for your creator profile.
+          </p>
+
+
+          <input
+            id="bioTopic"
+            type="text"
+            placeholder="e.g. gaming creator"
+          >
+
+
+          <button
+            onclick="generateBios()"
+          >
+            Generate Bios
+          </button>
+
+
+          <div
+            id="bioResult"
+            class="result"
+          ></div>
 
         </article>
 
@@ -357,7 +463,9 @@
       </div>
 
 
-      <p style="text-align:center; margin-top:25px;">
+      <p
+        style="text-align:center; margin-top:25px;"
+      >
 
         <a
           href="/creatorkit/about.html"
@@ -387,33 +495,25 @@
 
     <p>
 
-      <a
-        href="/creatorkit/privacy.html"
-      >
+      <a href="/creatorkit/privacy.html">
         Privacy Policy
       </a>
 
       ·
 
-      <a
-        href="/creatorkit/terms.html"
-      >
+      <a href="/creatorkit/terms.html">
         Terms & Conditions
       </a>
 
       ·
 
-      <a
-        href="/creatorkit/about.html"
-      >
+      <a href="/creatorkit/about.html">
         About Us
       </a>
 
       ·
 
-      <a
-        href="/creatorkit/contact.html"
-      >
+      <a href="/creatorkit/contact.html">
         Contact
       </a>
 
@@ -424,9 +524,116 @@
 
 
 
-  <!-- JAVASCRIPT -->
+  <!-- EXISTING JAVASCRIPT -->
 
   <script src="script.js"></script>
+
+
+
+  <!-- NEW TOOL JAVASCRIPT -->
+
+  <script>
+
+    /* YouTube Hook Generator */
+
+    function generateHooks() {
+
+      const topic =
+        document.getElementById("hookTopic").value.trim();
+
+      const result =
+        document.getElementById("hookResult");
+
+
+      if (!topic) {
+
+        result.innerHTML =
+          "Please enter a video topic.";
+
+        return;
+      }
+
+
+      const hooks = [
+
+        `🔥 Stop scrolling! Here's what you need to know about ${topic}.`,
+
+        `I tried ${topic} so you don't have to.`,
+
+        `Before you start ${topic}, watch this.`,
+
+        `Nobody tells you this about ${topic}.`,
+
+        `This completely changed the way I look at ${topic}.`,
+
+        `Wait until you see what happened with ${topic}.`,
+
+        `Here's the truth about ${topic}.`,
+
+        `5 things you should know about ${topic}.`
+
+      ];
+
+
+      result.innerHTML =
+        hooks
+          .map((hook, index) =>
+            `<div>${index + 1}. ${hook}</div>`
+          )
+          .join("");
+
+    }
+
+
+
+    /* Instagram Bio Generator */
+
+    function generateBios() {
+
+      const topic =
+        document.getElementById("bioTopic").value.trim();
+
+      const result =
+        document.getElementById("bioResult");
+
+
+      if (!topic) {
+
+        result.innerHTML =
+          "Please enter your creator topic.";
+
+        return;
+      }
+
+
+      const bios = [
+
+        `🎮 ${topic}<br>🔥 Creating. Gaming. Growing.<br>👇 Follow the journey`,
+
+        `⚡ ${topic} Creator<br>🎬 Content • Gaming • Fun<br>🚀 New content regularly`,
+
+        `🎮 ${topic}<br>🎥 Turning ideas into content<br>✨ Follow for more`,
+
+        `🔥 ${topic} | Creator<br>🎬 Videos • Reels • Gaming<br>👇 Join the community`,
+
+        `🚀 ${topic} Creator<br>🎮 Gaming & Content<br>💡 Create. Learn. Grow.`
+
+      ];
+
+
+      result.innerHTML =
+        bios
+          .map((bio, index) =>
+            `<div style="margin-bottom:10px;">
+              <b>${index + 1}.</b><br>
+              ${bio}
+            </div>`
+          )
+          .join("");
+
+    }
+
+  </script>
 
 
 </body>
