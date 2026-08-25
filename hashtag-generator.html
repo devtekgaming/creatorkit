@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
@@ -15,7 +20,10 @@
     content="hashtag generator, free hashtag generator, Instagram hashtag generator, YouTube hashtags, gaming hashtags, CreatorKit"
   >
 
-  <meta name="robots" content="index, follow">
+  <meta
+    name="robots"
+    content="index, follow"
+  >
 
   <meta
     property="og:title"
@@ -32,225 +40,680 @@
     content="https://devtekgaming.github.io/creatorkit/hashtag-generator.html"
   >
 
-  <meta property="og:type" content="website">
+  <meta
+    property="og:type"
+    content="website"
+  >
 
-  <title>Hashtag Generator — Free Tool | CreatorKit</title>
+  <title>
+    Hashtag Generator — Free Tool | CreatorKit
+  </title>
 
-  <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
 </head>
 
 
 <body>
 
-  <!-- HEADER -->
 
-  <header>
+<!-- =========================
+     HEADER
+========================= -->
 
-    <div class="nav">
+<header>
 
-      <a
-        class="logo"
-        href="/creatorkit/"
+  <div class="nav">
+
+    <a
+      class="logo"
+      href="/creatorkit/"
+    >
+      Creator<span>Kit</span>
+    </a>
+
+
+    <a
+      class="nav-btn"
+      href="/creatorkit/"
+    >
+      All Tools
+    </a>
+
+  </div>
+
+</header>
+
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+  <p class="badge">
+    #️⃣ FREE CREATOR TOOL
+  </p>
+
+
+  <h1>
+    Hashtag<br>
+    <span>Generator</span>
+  </h1>
+
+
+  <p class="sub">
+    Generate relevant hashtags for Instagram, YouTube,
+    Reels, Shorts and gaming content.
+  </p>
+
+</section>
+
+
+
+<!-- =========================
+     TOOL
+========================= -->
+
+<section class="tools">
+
+  <div class="grid">
+
+    <article class="card">
+
+      <div class="icon">
+        #️⃣
+      </div>
+
+
+      <h2>
+        Generate Hashtags
+      </h2>
+
+
+      <p>
+        Enter your content topic and get hashtag ideas instantly.
+      </p>
+
+
+      <input
+        id="hashTopic"
+        type="text"
+        placeholder="e.g. gaming setup"
+        autocomplete="off"
       >
-        Creator<span>Kit</span>
-      </a>
 
-      <a
-        class="nav-btn"
-        href="/creatorkit/"
+
+      <button
+        type="button"
+        onclick="generateHashtags()"
       >
-        All Tools
-      </a>
+        Generate Hashtags
+      </button>
+
+
+      <div
+        id="hashResult"
+        class="result"
+      ></div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     AD
+========================= -->
+
+<div class="ad-slot">
+  ADVERTISEMENT
+</div>
+
+
+
+<!-- =========================
+     HOW TO USE
+========================= -->
+
+<section class="about">
+
+  <h2>
+    How to use the Hashtag Generator
+  </h2>
+
+
+  <div class="features">
+
+
+    <div>
+
+      <b>
+        1️⃣ Enter your topic
+      </b>
+
+      <p>
+        Type the subject of your post, Reel,
+        Short or video.
+      </p>
 
     </div>
 
-  </header>
 
+    <div>
 
+      <b>
+        2️⃣ Generate hashtags
+      </b>
 
-  <!-- MAIN -->
-
-  <main>
-
-    <!-- HERO -->
-
-    <section class="hero">
-
-      <p class="badge">
-        #️⃣ FREE CREATOR TOOL
+      <p>
+        Click the Generate Hashtags button
+        to get ideas instantly.
       </p>
 
-      <h1>
-        Hashtag<br>
-        <span>Generator</span>
-      </h1>
-
-      <p class="sub">
-        Generate relevant hashtags for Instagram, YouTube, Reels,
-        Shorts and gaming content.
-      </p>
-
-    </section>
-
-
-
-    <!-- TOOL -->
-
-    <section class="tools">
-
-      <div class="grid">
-
-        <article class="card">
-
-          <div class="icon">
-            #️⃣
-          </div>
-
-          <h2>
-            Generate Hashtags
-          </h2>
-
-          <p>
-            Enter your content topic and get hashtag ideas instantly.
-          </p>
-
-          <input
-            id="hashTopic"
-            type="text"
-            placeholder="e.g. gaming setup"
-          >
-
-          <button onclick="generateHashtags()">
-            Generate Hashtags
-          </button>
-
-          <div
-            id="hashResult"
-            class="result"
-          ></div>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- AD -->
-
-    <div class="ad-slot">
-      ADVERTISEMENT
     </div>
 
 
+    <div>
 
-    <!-- HOW TO USE -->
+      <b>
+        3️⃣ Copy your hashtags
+      </b>
 
-    <section class="about">
-
-      <h2>
-        How to use the Hashtag Generator
-      </h2>
-
-      <div class="features">
-
-        <div>
-          <b>1️⃣ Enter your topic</b>
-
-          <p>
-            Type the subject of your post or video.
-          </p>
-        </div>
-
-        <div>
-          <b>2️⃣ Generate hashtags</b>
-
-          <p>
-            Click the Generate Hashtags button.
-          </p>
-        </div>
-
-        <div>
-          <b>3️⃣ Choose your hashtags</b>
-
-          <p>
-            Pick the hashtags that match your content.
-          </p>
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- SEO CONTENT -->
-
-    <section class="about">
-
-      <h2>
-        What is a Hashtag Generator?
-      </h2>
-
-      <p
-        style="max-width:800px; margin:0 auto; line-height:1.8;"
-      >
-        CreatorKit's Hashtag Generator is a free tool that helps
-        creators quickly find hashtag ideas based on their content topic.
-        It can be useful for Instagram posts, Reels, YouTube Shorts,
-        gaming videos and other social media content.
+      <p>
+        Copy the generated hashtags and use
+        the ones relevant to your content.
       </p>
 
+    </div>
 
-      <h2 style="margin-top:40px;">
-        Who can use this tool?
-      </h2>
 
-      <p
-        style="max-width:800px; margin:0 auto; line-height:1.8;"
-      >
-        YouTubers, Instagram creators, gamers, vloggers and other
-        content creators can use this tool to brainstorm relevant
-        hashtags. No signup is required.
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     SEO CONTENT
+========================= -->
+
+<section class="about">
+
+  <h2>
+    What is a Hashtag Generator?
+  </h2>
+
+
+  <p
+    style="
+      max-width:800px;
+      margin:0 auto;
+      line-height:1.8;
+    "
+  >
+    CreatorKit's Hashtag Generator is a free browser-based
+    tool that helps creators quickly generate hashtag ideas
+    based on their content topic. It can be useful for
+    Instagram posts, Reels, YouTube Shorts, gaming videos
+    and other social media content.
+  </p>
+
+
+
+  <h2
+    style="margin-top:40px;"
+  >
+    Who can use this tool?
+  </h2>
+
+
+  <p
+    style="
+      max-width:800px;
+      margin:0 auto;
+      line-height:1.8;
+    "
+  >
+    YouTubers, Instagram creators, gamers, vloggers and
+    other content creators can use this tool to brainstorm
+    relevant hashtags. No signup is required and the tool
+    works directly in your browser.
+  </p>
+
+</section>
+
+
+
+<!-- =========================
+     FAQ
+========================= -->
+
+<section class="about">
+
+  <h2>
+    Frequently Asked Questions
+  </h2>
+
+
+  <div class="features">
+
+
+    <div>
+
+      <b>
+        Is the Hashtag Generator free?
+      </b>
+
+      <p>
+        Yes. CreatorKit provides this tool for free.
       </p>
 
-    </section>
+    </div>
+
+
+    <div>
+
+      <b>
+        Do I need an account?
+      </b>
+
+      <p>
+        No account or signup is required.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <b>
+        Can I copy the generated hashtags?
+      </b>
+
+      <p>
+        Yes. Use the Copy Result button to copy
+        the generated hashtags.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+</main>
 
 
 
-    <!-- FAQ -->
+<!-- =========================
+     FOOTER
+========================= -->
 
-    <section class="about">
+<footer>
 
-      <h2>
-        Frequently Asked Questions
-      </h2>
+  <p>
+    © 2026 CreatorKit · Free tools for creators
+  </p>
 
-      <div class="features">
 
-        <div>
+  <p>
 
-          <b>
-            Is the Hashtag Generator free?
-          </b>
+    <a
+      href="/creatorkit/privacy.html"
+    >
+      Privacy Policy
+    </a>
 
-          <p>
-            Yes. CreatorKit provides this tool for free.
-          </p>
+    ·
 
-        </div>
+    <a
+      href="/creatorkit/terms.html"
+    >
+      Terms & Conditions
+    </a>
 
-        <div>
+    ·
 
-          <b>
-            Do I need an account?
-          </b>
+    <a
+      href="/creatorkit/about.html"
+    >
+      About Us
+    </a>
 
-          <p>
-            No account or signup is required.
-          </p>
+    ·
 
-        </div>
+    <a
+      href="/creatorkit/contact.html"
+    >
+      Contact
+    </a>
 
-        <div>
+  </p>
+
+</footer>
+
+
+
+<!-- =========================
+     HASHTAG GENERATOR SCRIPT
+========================= -->
+
+<script>
+
+function generateHashtags() {
+
+  const input =
+    document.getElementById("hashTopic");
+
+  const result =
+    document.getElementById("hashResult");
+
+
+  const topic =
+    input.value.trim();
+
+
+  /* Empty input */
+
+  if (!topic) {
+
+    result.textContent =
+      "Please enter a topic first.";
+
+    return;
+
+  }
+
+
+  /* Clean topic */
+
+  const words =
+    topic
+      .toLowerCase()
+      .replace(/[^a-zA-Z0-9\s]/g, "")
+      .split(/\s+/)
+      .filter(Boolean);
+
+
+  const hashtags = [];
+
+
+  /* Individual words */
+
+  words.forEach(function(word) {
+
+    hashtags.push("#" + word);
+
+  });
+
+
+  /* Combined topic */
+
+  if (words.length > 1) {
+
+    hashtags.push(
+      "#" + words.join("")
+    );
+
+  }
+
+
+  /* Common creator hashtags */
+
+  const commonTags = [
+
+    "#contentcreator",
+    "#creator",
+    "#youtube",
+    "#instagram",
+    "#shorts",
+    "#reels",
+    "#viral",
+    "#trending",
+    "#gaming",
+    "#creatorlife"
+
+  ];
+
+
+  hashtags.push(...commonTags);
+
+
+  /* Remove duplicates */
+
+  const uniqueHashtags =
+    [...new Set(hashtags)]
+      .slice(0, 15);
+
+
+  const text =
+    uniqueHashtags.join(" ");
+
+
+  /* Show result */
+
+  result.textContent =
+    text;
+
+
+  /* Remove old copy button */
+
+  const oldButton =
+    result.querySelector(".copy-btn");
+
+
+  if (oldButton) {
+
+    oldButton.remove();
+
+  }
+
+
+  /* Create copy button */
+
+  const copyButton =
+    document.createElement("button");
+
+
+  copyButton.type =
+    "button";
+
+
+  copyButton.className =
+    "copy-btn";
+
+
+  copyButton.textContent =
+    "📋 Copy Result";
+
+
+  copyButton.style.marginTop =
+    "12px";
+
+
+  /* Copy action */
+
+  copyButton.addEventListener(
+    "click",
+    function() {
+
+      copyHashtags(
+        text,
+        copyButton
+      );
+
+    }
+  );
+
+
+  result.appendChild(
+    copyButton
+  );
+
+}
+
+
+
+/* =========================
+   COPY FUNCTION
+========================= */
+
+function copyHashtags(
+  text,
+  button
+) {
+
+
+  /* Modern clipboard */
+
+  if (
+    navigator.clipboard &&
+    window.isSecureContext
+  ) {
+
+    navigator.clipboard
+      .writeText(text)
+      .then(function() {
+
+        showCopied(button);
+
+      })
+      .catch(function() {
+
+        fallbackCopy(
+          text,
+          button
+        );
+
+      });
+
+    return;
+
+  }
+
+
+  /* Fallback */
+
+  fallbackCopy(
+    text,
+    button
+  );
+
+}
+
+
+
+/* =========================
+   FALLBACK COPY
+========================= */
+
+function fallbackCopy(
+  text,
+  button
+) {
+
+  const textarea =
+    document.createElement("textarea");
+
+
+  textarea.value =
+    text;
+
+
+  textarea.style.position =
+    "fixed";
+
+
+  textarea.style.left =
+    "-9999px";
+
+
+  document.body.appendChild(
+    textarea
+  );
+
+
+  textarea.focus();
+
+  textarea.select();
+
+
+  try {
+
+    document.execCommand(
+      "copy"
+    );
+
+    showCopied(button);
+
+  }
+
+  catch (error) {
+
+    button.textContent =
+      "Copy failed";
+
+  }
+
+
+  textarea.remove();
+
+}
+
+
+
+/* =========================
+   COPIED MESSAGE
+========================= */
+
+function showCopied(button) {
+
+  button.textContent =
+    "✓ Copied!";
+
+
+  setTimeout(
+    function() {
+
+      button.textContent =
+        "📋 Copy Result";
+
+    },
+    1800
+  );
+
+}
+
+</script>
+
+
+</body>
+
+</html>
+
+Ab: GitHub mein "hashtag-generator.html" open → Edit → Ctrl+A → pura code replace → Commit changes.
+
+Phir page refresh karke "gaming setup" type kar.
+
+Expected result:
+
+"#gaming #setup #gamingsetup #contentcreator #creator #youtube ..."
+
+Aur neeche 📋 Copy Result bhi aayega. 🔥
